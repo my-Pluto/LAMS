@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.zysns.login.Login"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="452.0" layoutY="318.0" text="用户名：" />
+            <TextField layoutX="527.0" layoutY="313.0" promptText="user" />
+            <Label layoutX="452.0" layoutY="396.0" text="密   码：" />
+            <PasswordField layoutX="527.0" layoutY="391.0" promptText="password" />
+            <Button layoutX="649.0" layoutY="470.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="注册" />
+            <Button layoutX="442.0" layoutY="470.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="登录" />
+            <ChoiceBox layoutX="350.0" layoutY="313.0" prefHeight="30.0" prefWidth="80.0" />
+            <Separator layoutY="738.0" prefHeight="0.0" prefWidth="1280.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <Label text="Version 1.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="1150.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+</BorderPane>
