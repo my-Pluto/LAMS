@@ -6,15 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Main extends Window{
 
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+    @Override    public void start(Stage primaryStage) throws Exception{
+        window = primaryStage;
+        Parent root = FXMLLoader.load(getClass().getResource("../login/Login.fxml"));
+        primaryStage.setTitle("图书馆自动化管理系统");
+        primaryStage.setScene(new Scene(root, 1280, 800));
         primaryStage.show();
-
     }
 
 

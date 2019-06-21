@@ -9,18 +9,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zysns.login.Register">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem fx:id="exit_button" mnemonicParsing="false" onAction="#exit" text="exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="about_button" mnemonicParsing="false" onAction="#about" text="About" />
             </items>
           </Menu>
         </menus>
@@ -98,17 +98,17 @@
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <TextField editable="false" prefHeight="44.0" prefWidth="657.0" promptText="请输入管理员为您创建的读者证编号" GridPane.columnIndex="2" />
-                        <TextField prefHeight="44.0" prefWidth="657.0" promptText="请设置您的密码" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <TextField prefHeight="44.0" prefWidth="657.0" promptText="请输入您的真实姓名" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <DatePicker prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <TextField prefHeight="44.0" prefWidth="657.0" promptText="请输入您的年龄" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <ChoiceBox prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <TextField fx:id="card_id" editable="false" prefHeight="44.0" prefWidth="657.0" promptText="请输入管理员为您创建的读者证编号" GridPane.columnIndex="2" />
+                        <TextField fx:id="password_text" prefHeight="44.0" prefWidth="657.0" promptText="请设置您的密码" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="name_text" prefHeight="44.0" prefWidth="657.0" promptText="请输入您的真实姓名" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="birthday_date" prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <TextField fx:id="age_text" prefHeight="44.0" prefWidth="657.0" promptText="请输入您的年龄" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <ChoiceBox fx:id="reader_grade" prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
                </center>
                <bottom>
-                  <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="149.0" text="注册" BorderPane.alignment="CENTER">
+                  <Button fx:id="register_button" mnemonicParsing="false" onAction="#register" prefHeight="63.0" prefWidth="149.0" text="注册" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets bottom="10.0" />
                      </BorderPane.margin>
@@ -127,11 +127,12 @@
                         <Font name="DengXian Light" size="58.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="165.0" fitWidth="187.0" layoutX="12.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="110.0" fitWidth="172.0" layoutX="12.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../lib/picture/logo.png" />
+                        <Image url="@../lib/picture/logolow.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="back_button" layoutX="1172.0" layoutY="37.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #FF0000;" text="返回" />
                </children>
             </AnchorPane>
          </top>
