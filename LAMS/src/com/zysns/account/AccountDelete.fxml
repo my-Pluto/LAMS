@@ -42,21 +42,26 @@
                      </image></ImageView>
                   <Label layoutX="1130.0" layoutY="39.0" text="用户名" />
                   <Button layoutX="1185.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="退出" />
-                  <Button layoutX="191.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" text="个人信息查询">
+                  <Button layoutX="191.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" text="读者证建立">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="310.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" text="图书查询">
+                  <Button layoutX="310.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" text="管理员建立">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="429.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" text="借阅热度查询">
+                  <Button layoutX="429.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" style="-fx-background-color: linear-gradient(#FFB90F, #FFFF00);" text="账号删除">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
+                  <ImageView fitHeight="63.0" fitWidth="534.0" layoutX="574.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../lib/picture/logolong.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </top>
@@ -73,7 +78,7 @@
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient( #B0E2FF,#BBFFFF);" text="查询系统">
+                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="查询系统">
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
@@ -81,7 +86,7 @@
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="账号管理">
+                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient( #B0E2FF,#BBFFFF);" text="账号管理">
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
@@ -97,11 +102,22 @@
                   <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
                </top>
                <center>
-                  <ImageView fitHeight="646.0" fitWidth="1155.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-                     <image>
-                        <Image url="@../../../../lib/picture/backimage.jpg" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button layoutX="462.0" layoutY="509.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="119.0" text="删除">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <ComboBox layoutX="399.0" layoutY="64.0" prefHeight="36.0" prefWidth="241.0" promptText="请选择需要删除的账号类别" />
+                        <Label layoutX="401.0" layoutY="193.0" text="请输入读者证号/工号">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="401.0" layoutY="305.0" prefHeight="40.0" prefWidth="240.0" />
+                     </children>
+                  </AnchorPane>
                </center>
             </BorderPane>
          </center>
