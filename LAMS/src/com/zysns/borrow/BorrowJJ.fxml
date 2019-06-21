@@ -44,7 +44,7 @@
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="191.0" layoutY="60.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" text="借书">
+                  <Button layoutX="191.0" layoutY="60.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: linear-gradient(#FFB90F, #FFFF00);" text="借书">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
@@ -71,7 +71,7 @@
          <left>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书借还" />
+                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient( #B0E2FF,#BBFFFF);" text="图书借还" />
                   <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="查询系统" />
                   <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书管理" />
                   <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="账号管理" />
@@ -86,6 +86,29 @@
                <top>
                   <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
                </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="226.0" layoutY="158.0" prefHeight="39.0" prefWidth="154.0" text="读者证号：">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="387.0" layoutY="158.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入您的读者证号" />
+                        <Label layoutX="226.0" layoutY="283.0" prefHeight="39.0" prefWidth="154.0" text="图书编号：">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="387.0" layoutY="282.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入图书证号" />
+                        <Button layoutX="476.0" layoutY="449.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="129.0" text="借阅">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </center>
             </BorderPane>
          </center>
       </BorderPane>

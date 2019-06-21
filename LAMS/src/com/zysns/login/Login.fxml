@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -8,8 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -27,16 +27,22 @@
       </MenuBar>
    </top>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFFFFF;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="452.0" layoutY="318.0" text="用户名：" />
             <TextField layoutX="527.0" layoutY="313.0" promptText="user" />
             <Label layoutX="452.0" layoutY="396.0" text="密   码：" />
             <PasswordField layoutX="527.0" layoutY="391.0" promptText="password" />
-            <Button layoutX="649.0" layoutY="470.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="注册" />
-            <Button layoutX="442.0" layoutY="470.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="登录" />
+            <Button layoutX="649.0" layoutY="470.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ffff00; -fx-background-radius: 6;" text="注册" />
+            <Button layoutX="442.0" layoutY="470.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #f0ffff; -fx-background-radius: 6;" text="登录" />
             <ChoiceBox layoutX="350.0" layoutY="313.0" prefHeight="30.0" prefWidth="80.0" />
             <Separator layoutY="738.0" prefHeight="0.0" prefWidth="1280.0" />
+            <ImageView fitHeight="176.0" fitWidth="280.0" layoutX="986.0" layoutY="497.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../lib/picture/00.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="1000.0" layoutX="112.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
    </center>
