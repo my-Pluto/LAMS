@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="LAMS">
-      <change afterPath="$PROJECT_DIR$/src/com/zysns/main/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/picture/00.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/picture/backimage.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/picture/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/picture/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/picture/logolong.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/picture/logolow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/login/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/login/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/Register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/login/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/main/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/main/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/LoginView.java" afterDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="LAMS" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -78,36 +59,7 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="8" column="33" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="14" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Register.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#770#771#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -203,13 +155,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="zysns" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LAMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LAMS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="zysns" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -428,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561085317901</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="LAMS">
+      <created>1561110031832</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1561110031832</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -436,9 +388,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18498659" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18498659" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -447,13 +398,13 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289855" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289855" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289855" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3289855" />
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
@@ -769,17 +720,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Login.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/other/AlertBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/other/About.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -844,10 +784,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/other/AlertBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Register.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+        <state relative-caret-position="280">
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#749#750#0" expanded="true" />
@@ -860,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="14" selection-end-column="58" />
+        <state relative-caret-position="223">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

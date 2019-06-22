@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zysns.login.Login">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="exit_menu" mnemonicParsing="false" onAction="#exit" text="exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="about_menu" mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <Label text="Version 1.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="1150.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="730.0" fitWidth="1280.0" layoutY="-1.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../lib/picture/backimage.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="477.0" layoutY="430.0" text="用户名：" />
+            <TextField fx:id="user_text" layoutX="586.0" layoutY="359.0" promptText="user" />
+            <Label layoutX="478.0" layoutY="364.0" text="密   码：" />
+            <PasswordField fx:id="password_text" layoutX="586.0" layoutY="425.0" promptText="password" />
+            <Button fx:id="registerbutton" layoutX="707.0" layoutY="507.0" mnemonicParsing="false" onAction="#register" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ffff00; -fx-background-radius: 6;" text="注册" />
+            <Button fx:id="loginbuttion" layoutX="477.0" layoutY="507.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #f0ffff; -fx-background-radius: 6;" text="登录" />
+            <Separator layoutX="-2.0" layoutY="742.0" prefHeight="0.0" prefWidth="1280.0" />
+            <ImageView disable="true" fitHeight="143.0" fitWidth="1007.0" layoutX="137.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../lib/picture/logolong.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="select_user_or_admin" layoutX="585.0" layoutY="297.0" prefHeight="30.0" prefWidth="205.0" promptText="请选择登录类型" />
+            <Label layoutX="477.0" layoutY="302.0" text="登录类型：" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
