@@ -6,8 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,31 +14,65 @@ import java.util.ResourceBundle;
 
 import static com.zysns.other.About.showabout;
 
-public class Inventory extends Window implements Initializable {
+public class InventoryUpdate extends Window implements Initializable {
 
     @FXML
     private Button account_button;
 
     @FXML
-    private MenuItem exit_button;
+    private Button select_boob_button;
 
     @FXML
-    private MenuItem about_button;
-
-    @FXML
-    private Button new_book_button;
+    private TextField book_isbn;
 
     @FXML
     private Button exit_login_button;
 
     @FXML
-    private Button borrow_button;
-
-    @FXML
     private Button update_book_button;
 
     @FXML
+    private TextField book_name;
+
+    @FXML
+    private DatePicker book_date;
+
+    @FXML
+    private ComboBox<?> book_family;
+
+    @FXML
+    private TextField book_no;
+
+    @FXML
     private Button select_button;
+
+    @FXML
+    private TextField book_publish_button;
+
+    @FXML
+    private TextField bookID;
+
+    @FXML
+    private MenuItem About;
+
+    @FXML
+    private MenuItem exit;
+
+    @FXML
+    private Button new_book_button;
+
+    @FXML
+    private TextField book_quantity;
+
+    @FXML
+    private Button borrow_button;
+
+    @FXML
+    private TextField book_autor;
+
+    @FXML
+    private Label user;
+
 
     @FXML
     void borrow() throws IOException {
@@ -71,11 +104,6 @@ public class Inventory extends Window implements Initializable {
         getWindow().setScene(new Scene(new_book, 1280, 800));
     }
 
-    @FXML
-    void update_book() throws IOException {
-        Parent update_book = FXMLLoader.load(getClass().getResource("../inventory/InventoryUpdate.fxml"));
-        getWindow().setScene(new Scene(update_book, 1280, 800));
-    }
 
     @FXML
     void exit() {
@@ -87,8 +115,19 @@ public class Inventory extends Window implements Initializable {
         showabout();
     }
 
+    @FXML
+    void update_book() {
+
+    }
+
+    @FXML
+    void select_book() {
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 }
+

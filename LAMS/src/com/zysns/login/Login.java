@@ -43,12 +43,13 @@ public class Login extends Window implements Initializable {
     @FXML
     void register() throws IOException {
         Parent regiser = FXMLLoader.load(getClass().getResource("../login/Register.fxml"));
-       getWindow().setScene(new Scene(regiser, 1280, 800));
+        getWindow().setScene(new Scene(regiser, 1280, 800));
     }
 
     @FXML
-    void login() {
-
+    void login() throws IOException {
+        Parent view = FXMLLoader.load(getClass().getResource("../login/LoginView.fxml"));
+        getWindow().setScene(new Scene(view, 1280, 800));
     }
 
     @FXML
