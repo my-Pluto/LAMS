@@ -1,4 +1,4 @@
-package com.zysns.inventory;
+package com.zysns.borrow;
 
 import com.zysns.main.Window;
 import javafx.fxml.FXML;
@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
 
 import static com.zysns.other.About.showabout;
 
-public class InventoryNew extends Window implements Initializable {
+public class BorrowJch extends Window implements Initializable {
 
     @FXML
     private Button account_button;
@@ -23,56 +23,42 @@ public class InventoryNew extends Window implements Initializable {
     private MenuItem exit_button;
 
     @FXML
-    private TextField bbookno;
-
-    @FXML
-    private DatePicker bdate;
-
-    @FXML
-    private TextField bpublish;
-
-    @FXML
     private Button exit_login_button;
 
     @FXML
-    private TextField baoutor;
+    private Button book_button;
 
     @FXML
-    private Button update_book_button;
+    private MenuItem about;
+
+    @FXML
+    private TextField readerID;
+
+    @FXML
+    private Button message;
 
     @FXML
     private Button select_button;
 
     @FXML
-    private TextField bisbn;
+    private Button select_urge_button;
 
     @FXML
-    private MenuItem about_button;
+    private Button borrow_book_button;
 
     @FXML
-    private TextField bname;
+    private TableView<?> Table_view;
 
     @FXML
-    private TextField bquantity;
+    private Button still_book_button;
 
     @FXML
-    private Button borrow_button;
+    private Label user;
 
     @FXML
-    private Button new_button;
-
-    @FXML
-    private ComboBox<?> bfamily;
-
-    @FXML
-    void new_book_jdbc() {
-
-    }
-
-    @FXML
-    void borrow() throws IOException {
-        Parent borrow = FXMLLoader.load(getClass().getResource("../borrow/Borrow.fxml"));
-        getWindow().setScene(new Scene(borrow, 1280, 800));
+    void book() throws IOException {
+        Parent book = FXMLLoader.load(getClass().getResource("../inventory/Inventory.fxml"));
+        getWindow().setScene(new Scene(book, 1280, 800));
     }
 
     @FXML
@@ -94,12 +80,6 @@ public class InventoryNew extends Window implements Initializable {
     }
 
     @FXML
-    void update_book() throws IOException {
-        Parent update_book = FXMLLoader.load(getClass().getResource("../inventory/InventoryUpdate.fxml"));
-        getWindow().setScene(new Scene(update_book, 1280, 800));
-    }
-
-    @FXML
     void exit() {
         System.exit(0);
     }
@@ -109,8 +89,27 @@ public class InventoryNew extends Window implements Initializable {
         showabout();
     }
 
+    @FXML
+    void borrow_book() throws IOException {
+        Parent borrow = FXMLLoader.load(getClass().getResource("../borrow/BorrowJJ.fxml"));
+        getWindow().setScene(new Scene(borrow, 1280, 800));
+    }
+
+    @FXML
+    void still_book() throws IOException {
+        Parent still = FXMLLoader.load(getClass().getResource("../borrow/BorrowJh.fxml"));
+        getWindow().setScene(new Scene(still, 1280, 800));
+    }
+
+    @FXML
+    void message() throws IOException {
+        Parent message = FXMLLoader.load(getClass().getResource("../borrow/BorrowJc.fxml"));
+        getWindow().setScene(new Scene(message, 1280, 800));
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 }
+

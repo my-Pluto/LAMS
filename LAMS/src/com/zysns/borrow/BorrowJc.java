@@ -1,4 +1,4 @@
-package com.zysns.select;
+package com.zysns.borrow;
 
 import com.zysns.main.Window;
 import javafx.fxml.FXML;
@@ -8,6 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,19 +18,16 @@ import java.util.ResourceBundle;
 
 import static com.zysns.other.About.showabout;
 
-public class Select extends Window implements Initializable {
+public class BorrowJc extends Window implements Initializable {
 
     @FXML
     private Button account_button;
 
     @FXML
-    private Button reader_message_button;
+    private MenuItem exit_button;
 
     @FXML
-    private Button high_button;
-
-    @FXML
-    private Button book_select_button;
+    private Button select_c_button;
 
     @FXML
     private Button exit_login_button;
@@ -36,10 +36,28 @@ public class Select extends Window implements Initializable {
     private Button book_button;
 
     @FXML
-    private Button borrow_button;
+    private MenuItem about;
+
+    @FXML
+    private TextField readerID;
+
+    @FXML
+    private Button select_button;
+
+    @FXML
+    private Button borrow_book_button;
+
+    @FXML
+    private TableView<?> tableview;
+
+    @FXML
+    private Button still_book_button;
 
     @FXML
     private Label user;
+
+    @FXML
+    private Button urge_button;
 
     @FXML
     void book() throws IOException {
@@ -48,9 +66,9 @@ public class Select extends Window implements Initializable {
     }
 
     @FXML
-    void borrow_book() throws IOException {
-        Parent borrow = FXMLLoader.load(getClass().getResource("../borrow/Borrow.fxml"));
-        getWindow().setScene(new Scene(borrow, 1280, 800));
+    void select() throws IOException {
+        Parent select = FXMLLoader.load(getClass().getResource("../select/Select.fxml"));
+        getWindow().setScene(new Scene(select, 1280, 800));
     }
 
     @FXML
@@ -76,22 +94,24 @@ public class Select extends Window implements Initializable {
     }
 
     @FXML
-    void reader_message() throws IOException {
-        Parent reader_message = FXMLLoader.load(getClass().getResource("../select/SelectPerson.fxml"));
-        getWindow().setScene(new Scene(reader_message, 1280, 800));
+    void urge_book() throws IOException {
+        Parent urge = FXMLLoader.load(getClass().getResource("../borrow/BorrowJch.fxml"));
+        getWindow().setScene(new Scene(urge, 1280, 800));
     }
 
     @FXML
-    void book_select() throws IOException {
-        Parent book_message = FXMLLoader.load(getClass().getResource("../select/SelectBook.fxml"));
-        getWindow().setScene(new Scene(book_message, 1280, 800));
+    void borrow_book() throws IOException {
+        Parent borrow = FXMLLoader.load(getClass().getResource("../borrow/BorrowJJ.fxml"));
+        getWindow().setScene(new Scene(borrow, 1280, 800));
     }
 
     @FXML
-    void high() throws IOException {
-        Parent high = FXMLLoader.load(getClass().getResource("../select/SelectR.fxml"));
-        getWindow().setScene(new Scene(high, 1280, 800));
+    void still_book() throws IOException {
+        Parent still = FXMLLoader.load(getClass().getResource("../borrow/BorrowJh.fxml"));
+        getWindow().setScene(new Scene(still, 1280, 800));
     }
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

@@ -7,7 +7,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TreeView;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,19 +20,22 @@ import java.util.ResourceBundle;
 
 import static com.zysns.other.About.showabout;
 
-public class Select extends Window implements Initializable {
+public class SelectBook extends Window implements Initializable {
+
+    @FXML
+    private ComboBox<?> combobox_select;
 
     @FXML
     private Button account_button;
 
     @FXML
-    private Button reader_message_button;
+    private MenuItem exit_button;
 
     @FXML
-    private Button high_button;
+    private TreeView<?> treeview_book;
 
     @FXML
-    private Button book_select_button;
+    private TextField select_text;
 
     @FXML
     private Button exit_login_button;
@@ -36,7 +44,22 @@ public class Select extends Window implements Initializable {
     private Button book_button;
 
     @FXML
+    private TableView<?> table_book;
+
+    @FXML
+    private Button reader_message_button;
+
+    @FXML
+    private MenuItem about_button;
+
+    @FXML
+    private Button high_button;
+
+    @FXML
     private Button borrow_button;
+
+    @FXML
+    private Button select_book_button;
 
     @FXML
     private Label user;
@@ -82,12 +105,6 @@ public class Select extends Window implements Initializable {
     }
 
     @FXML
-    void book_select() throws IOException {
-        Parent book_message = FXMLLoader.load(getClass().getResource("../select/SelectBook.fxml"));
-        getWindow().setScene(new Scene(book_message, 1280, 800));
-    }
-
-    @FXML
     void high() throws IOException {
         Parent high = FXMLLoader.load(getClass().getResource("../select/SelectR.fxml"));
         getWindow().setScene(new Scene(high, 1280, 800));
@@ -97,3 +114,4 @@ public class Select extends Window implements Initializable {
 
     }
 }
+

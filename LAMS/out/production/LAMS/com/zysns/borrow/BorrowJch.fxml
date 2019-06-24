@@ -9,23 +9,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zysns.borrow.Borrow">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zysns.borrow.BorrowJch">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="exit_button" mnemonicParsing="false" onAction="#exit" text="exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="about" mnemonicParsing="false" onAction="#about" text="About" />
             </items>
           </Menu>
         </menus>
@@ -38,26 +33,26 @@
                <children>
                   <ImageView fitHeight="99.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../lib/picture/logolow.png" />
+                        <Image url="@../lib/picture/logolow.png" />
                      </image></ImageView>
-                  <Label layoutX="1130.0" layoutY="39.0" text="用户名" />
-                  <Button layoutX="1185.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="退出" />
+                  <Label fx:id="user" layoutX="1130.0" layoutY="39.0" text="用户名" />
+                  <Button fx:id="exit_login_button" layoutX="1185.0" layoutY="34.0" mnemonicParsing="false" onAction="#exit_login" style="-fx-background-color: transparent;" text="退出" />
                   <Button layoutX="488.0" layoutY="60.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: linear-gradient(#FFB90F, #FFFF00);" text="催还信息">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="191.0" layoutY="60.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" text="借书">
+                  <Button fx:id="borrow_book_button" layoutX="191.0" layoutY="60.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#borrow_book" prefHeight="39.0" prefWidth="99.0" text="借书">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="290.0" layoutY="60.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" text="还书">
+                  <Button fx:id="still_book_button" layoutX="290.0" layoutY="60.0" mnemonicParsing="false" onAction="#still_book" prefHeight="39.0" prefWidth="99.0" text="还书">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="389.0" layoutY="60.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: ;" text="借阅信息">
+                  <Button fx:id="message" layoutX="389.0" layoutY="60.0" mnemonicParsing="false" onAction="#message" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: ;" text="借阅信息">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
@@ -74,10 +69,22 @@
          <left>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient( #B0E2FF,#BBFFFF);" text="图书借还" />
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="查询系统" />
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书管理" />
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="账号管理" />
+                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient( #B0E2FF,#BBFFFF);" text="图书借还">
+                     <VBox.margin>
+                        <Insets left="2.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="select_button" mnemonicParsing="false" onAction="#select" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="查询系统">
+                     <VBox.margin>
+                        <Insets left="2.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="book_button" mnemonicParsing="false" onAction="#book" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书管理">
+                     <VBox.margin>
+                        <Insets left="2.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="account_button" mnemonicParsing="false" onAction="#account" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="账号管理">
+                     <VBox.margin>
+                        <Insets left="2.0" />
+                     </VBox.margin></Button>
                </children>
             </VBox>
          </left>
@@ -97,13 +104,13 @@
                               <Font size="30.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="387.0" layoutY="14.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入需要查询的读者证号" />
-                        <Button layoutX="1031.0" layoutY="564.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="129.0" text="查询">
+                        <TextField fx:id="readerID" layoutX="387.0" layoutY="14.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入需要查询的读者证号" />
+                        <Button fx:id="select_urge_button" layoutX="1031.0" layoutY="564.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="129.0" text="查询">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Button>
-                        <TableView layoutX="19.0" layoutY="74.0" prefHeight="475.0" prefWidth="1136.0">
+                        <TableView fx:id="Table_view" layoutX="19.0" layoutY="74.0" prefHeight="475.0" prefWidth="1136.0">
                           <columns>
                             <TableColumn prefWidth="176.0" text="图书编号" />
                             <TableColumn prefWidth="223.0" text="图书名称" />
@@ -122,7 +129,7 @@
    <bottom>
       <Label text="Version 1.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets left="1150.0" />
+            <Insets bottom="2.0" left="1150.0" />
          </BorderPane.margin>
       </Label>
    </bottom>
