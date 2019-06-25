@@ -193,10 +193,10 @@
                               <TextField fx:id="baoutor" prefHeight="37.0" promptText="请输入图书作者" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                               <TextField fx:id="bname" prefHeight="37.0" promptText="请输入图书名称" GridPane.columnIndex="5" GridPane.rowIndex="1" />
                               <TextField fx:id="bisbn" prefHeight="37.0" promptText="请输入图书的ISBN" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                              <TextField fx:id="bpublish" editable="false" prefHeight="37.0" promptText="请输入出版社名称" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                              <TextField fx:id="bpublish" prefHeight="37.0" promptText="请输入出版社名称" GridPane.columnIndex="5" GridPane.rowIndex="3" />
                               <DatePicker fx:id="bdate" prefHeight="37.0" promptText="请选择出版时间" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                              <TextField fx:id="bquantity" editable="false" prefHeight="37.0" promptText="请输入新书的购买数量" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                              <TextField fx:id="bbookno" editable="false" prefHeight="37.0" promptText="请输入图书所在书架编号" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <TextField fx:id="bquantity" prefHeight="37.0" promptText="请输入新书的购买数量" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                              <TextField fx:id="bbookno" prefHeight="37.0" promptText="请输入图书所在书架编号" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                               <ComboBox fx:id="bfamily" prefHeight="37.0" prefWidth="251.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
                            </children>
                         </GridPane>

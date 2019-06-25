@@ -124,7 +124,7 @@
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField editable="false" prefHeight="37.0" promptText="请输入图书编号" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField prefHeight="37.0" promptText="请输入图书编号" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label prefHeight="37.0" prefWidth="92.0" text="图书名称" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="STKaiti" size="20.0" />
@@ -192,10 +192,10 @@
                               <TextField fx:id="book_autor" prefHeight="37.0" promptText="请输入图书作者" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <TextField fx:id="book_name" prefHeight="37.0" promptText="请输入图书名称" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                               <TextField fx:id="book_isbn" prefHeight="37.0" promptText="请输入图书的ISBN" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                              <TextField fx:id="book_publish_button" editable="false" prefHeight="37.0" promptText="请输入出版社名称" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                              <TextField fx:id="book_publish_button" prefHeight="37.0" promptText="请输入出版社名称" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                               <DatePicker fx:id="book_date" prefHeight="37.0" promptText="请选择出版时间" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <TextField fx:id="book_quantity" editable="false" prefHeight="37.0" promptText="请输入新书的购买数量" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                              <TextField fx:id="book_no" editable="false" prefHeight="37.0" promptText="请输入图书所在书架编号" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField fx:id="book_quantity" prefHeight="37.0" promptText="请输入新书的购买数量" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <TextField fx:id="book_no" prefHeight="37.0" promptText="请输入图书所在书架编号" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                               <ComboBox fx:id="book_family" prefHeight="37.0" prefWidth="251.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
                            </children>
                         </GridPane>
@@ -204,7 +204,7 @@
                               <Font name="STKaiti" size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="bookID" editable="false" layoutX="434.0" layoutY="50.0" prefHeight="37.0" prefWidth="239.0" promptText="请输入图书编号" />
+                        <TextField fx:id="bookID" layoutX="434.0" layoutY="50.0" prefHeight="37.0" prefWidth="239.0" promptText="请输入图书编号" />
                         <Button fx:id="select_boob_button" layoutX="701.0" layoutY="48.0" mnemonicParsing="false" onAction="#select_book" prefHeight="41.0" prefWidth="95.0" text="查询">
                            <font>
                               <Font size="20.0" />

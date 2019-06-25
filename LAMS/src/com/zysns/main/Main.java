@@ -1,6 +1,5 @@
 package com.zysns.main;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,6 +12,7 @@ public class Main extends Window{
         Parent root = FXMLLoader.load(getClass().getResource("../login/Login.fxml"));
         primaryStage.setTitle("图书馆自动化管理系统");
         primaryStage.setScene(new Scene(root, 1280, 800));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

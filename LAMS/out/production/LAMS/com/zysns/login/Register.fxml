@@ -98,7 +98,7 @@
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <TextField fx:id="card_id" editable="false" prefHeight="44.0" prefWidth="657.0" promptText="请输入管理员为您创建的读者证编号" GridPane.columnIndex="2" />
+                        <TextField fx:id="card_id" prefHeight="44.0" prefWidth="657.0" promptText="请输入管理员为您创建的读者证编号" GridPane.columnIndex="2" />
                         <TextField fx:id="password_text" prefHeight="44.0" prefWidth="657.0" promptText="请设置您的密码" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                         <TextField fx:id="name_text" prefHeight="44.0" prefWidth="657.0" promptText="请输入您的真实姓名" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                         <DatePicker fx:id="birthday_date" prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />

@@ -7,8 +7,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,7 +18,7 @@ import java.util.ResourceBundle;
 
 import static com.zysns.other.About.showabout;
 
-public class Account extends Window implements Initializable {
+public class AccountDelete extends Window implements Initializable {
 
     @FXML
     private MenuItem exit_button;
@@ -28,19 +30,25 @@ public class Account extends Window implements Initializable {
     private Button delete_button;
 
     @FXML
-    private Button message_button;
+    private Button message_create_button;
+
+    @FXML
+    private ComboBox<?> account_family_combobox;
 
     @FXML
     private Button exit_login_button;
-
-    @FXML
-    private Button readerID_button;
 
     @FXML
     private Button book_button;
 
     @FXML
     private Button borrow_button;
+
+    @FXML
+    private Button readerID_create_button;
+
+    @FXML
+    private TextField Id_text;
 
     @FXML
     private Button select_button;
@@ -100,16 +108,8 @@ public class Account extends Window implements Initializable {
         getWindow().setScene(new Scene(root, 1280, 800));
     }
 
-    @FXML
-    void account_delete() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../account/AccountDelete.fxml"));
-        getWindow().setScene(new Scene(root, 1280, 800));
-    }
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
 }
-

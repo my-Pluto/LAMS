@@ -7,8 +7,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,37 +19,61 @@ import java.util.ResourceBundle;
 
 import static com.zysns.other.About.showabout;
 
-public class Account extends Window implements Initializable {
+public class AccountG extends Window implements Initializable {
 
     @FXML
     private MenuItem exit_button;
 
     @FXML
-    private MenuItem about_button;
-
-    @FXML
     private Button delete_button;
 
     @FXML
-    private Button message_button;
+    private ComboBox<?> message_grade_combobox;
+
+    @FXML
+    private TextField leader_text;
 
     @FXML
     private Button exit_login_button;
 
     @FXML
-    private Button readerID_button;
+    private TextField dept_text;
 
     @FXML
     private Button book_button;
 
     @FXML
-    private Button borrow_button;
+    private TextField name_text;
+
+    @FXML
+    private ComboBox<?> sex_combobox;
 
     @FXML
     private Button select_button;
 
     @FXML
+    private MenuItem about_button;
+
+    @FXML
+    private TextField ID_texxt;
+
+    @FXML
+    private Button create_button;
+
+    @FXML
+    private DatePicker birthday_date;
+
+    @FXML
+    private TextField password_text;
+
+    @FXML
+    private Button readerID_create_button;
+
+    @FXML
     private Label user;
+
+    @FXML
+    private Button borroe_button;
 
     @FXML
         //显示图书借还界面
@@ -91,12 +118,6 @@ public class Account extends Window implements Initializable {
     @FXML
     void readerID_create() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../account/AccountReader.fxml"));
-        getWindow().setScene(new Scene(root, 1280, 800));
-    }
-
-    @FXML
-    void message_create() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../account/AccountG.fxml"));
         getWindow().setScene(new Scene(root, 1280, 800));
     }
 

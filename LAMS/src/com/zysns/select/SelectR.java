@@ -1,5 +1,6 @@
 package com.zysns.select;
 
+
 import com.zysns.main.Window;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TableView;
 
 import java.io.IOException;
 import java.net.URL;
@@ -17,7 +18,7 @@ import java.util.ResourceBundle;
 
 import static com.zysns.other.About.showabout;
 
-public class SelectPerson extends Window implements Initializable {
+public class SelectR extends Window implements Initializable {
 
     @FXML
     private Button account_button;
@@ -26,7 +27,13 @@ public class SelectPerson extends Window implements Initializable {
     private MenuItem exit_button;
 
     @FXML
-    private Label sextext;
+    private Button reader_message_button;
+
+    @FXML
+    private MenuItem about_button;
+
+    @FXML
+    private TableView<?> table_view;
 
     @FXML
     private Button book_select_button;
@@ -38,34 +45,7 @@ public class SelectPerson extends Window implements Initializable {
     private Button book_button;
 
     @FXML
-    private TextField readerID;
-
-    @FXML
-    private Label IDtext;
-
-    @FXML
-    private Label gradetext;
-
-    @FXML
-    private MenuItem about_button;
-
-    @FXML
-    private Label datetext;
-
-    @FXML
-    private Button high_button;
-
-    @FXML
-    private Label dateIDtext;
-
-    @FXML
-    private Button select_reader_button;
-
-    @FXML
     private Button borrow_button;
-
-    @FXML
-    private Label nametext;
 
     @FXML
     private Label user;
@@ -116,14 +96,9 @@ public class SelectPerson extends Window implements Initializable {
         getWindow().setScene(new Scene(book_message, 1280, 800));
     }
 
-    @FXML
-    void high() throws IOException {
-        Parent high = FXMLLoader.load(getClass().getResource("../select/SelectR.fxml"));
-        getWindow().setScene(new Scene(high, 1280, 800));
-    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-}
 
+}

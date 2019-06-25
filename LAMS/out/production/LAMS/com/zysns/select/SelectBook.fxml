@@ -9,23 +9,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zysns.borrow.Borrow">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zysns.select.SelectBook">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="exit_button" mnemonicParsing="false" onAction="#exit" text="exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="about_button" mnemonicParsing="false" onAction="#about" text="About" />
             </items>
           </Menu>
         </menus>
@@ -38,11 +33,11 @@
                <children>
                   <ImageView fitHeight="99.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../lib/picture/logolow.png" />
+                        <Image url="@../lib/picture/logolow.png" />
                      </image></ImageView>
-                  <Label layoutX="1130.0" layoutY="39.0" text="用户名" />
-                  <Button layoutX="1185.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="退出" />
-                  <Button layoutX="191.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" text="个人信息查询">
+                  <Label fx:id="user" layoutX="1130.0" layoutY="39.0" text="用户名" />
+                  <Button fx:id="exit_login_button" layoutX="1185.0" layoutY="34.0" mnemonicParsing="false" onAction="#exit_login" style="-fx-background-color: transparent;" text="退出" />
+                  <Button fx:id="reader_message_button" layoutX="191.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#reader_message" prefHeight="49.0" prefWidth="119.0" text="个人信息查询">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
@@ -52,7 +47,7 @@
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="429.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" text="借阅热度查询">
+                  <Button fx:id="high_button" layoutX="429.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#high" prefHeight="49.0" prefWidth="119.0" text="借阅热度查询">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
@@ -69,7 +64,7 @@
          <left>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书借还">
+                  <Button fx:id="borrow_button" mnemonicParsing="false" onAction="#borrow_book" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书借还">
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
@@ -77,11 +72,11 @@
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书管理">
+                  <Button fx:id="book_button" mnemonicParsing="false" onAction="#book" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书管理">
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="账号管理">
+                  <Button fx:id="account_button" mnemonicParsing="false" onAction="#account" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="账号管理">
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
@@ -104,15 +99,15 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="555.0" layoutY="16.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入需要查询的关键词" />
-                        <Button layoutX="979.0" layoutY="16.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="113.0" text="查询">
+                        <TextField fx:id="select_text" layoutX="555.0" layoutY="16.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入需要查询的关键词" />
+                        <Button fx:id="select_book_button" layoutX="979.0" layoutY="16.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="113.0" text="查询">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Button>
-                        <ComboBox layoutX="287.0" layoutY="15.0" prefHeight="40.0" prefWidth="150.0" promptText="查询方式" />
-                        <TreeView layoutX="5.0" layoutY="8.0" prefHeight="620.0" prefWidth="273.0" />
-                        <TableView layoutX="284.0" layoutY="67.0" prefHeight="561.0" prefWidth="881.0">
+                        <ComboBox fx:id="combobox_select" layoutX="287.0" layoutY="15.0" prefHeight="40.0" prefWidth="150.0" promptText="查询方式" />
+                        <TreeView fx:id="treeview_book" layoutX="5.0" layoutY="8.0" prefHeight="620.0" prefWidth="273.0" />
+                        <TableView fx:id="table_book" layoutX="284.0" layoutY="67.0" prefHeight="561.0" prefWidth="881.0">
                           <columns>
                             <TableColumn prefWidth="99.0" text="图书编号" />
                             <TableColumn prefWidth="85.0" text="图书名称" />
