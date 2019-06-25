@@ -14,6 +14,15 @@ public class Book {
     private String bisbn;    //图书ISBN
     private String bbookno;   //图书所在书架编号
     private int bquantity;    //图书馆藏数量
+    private String bfamily;    //图书所属类别
+
+    public String getBfamily() {
+        return bfamily;
+    }
+
+    public void setBfamily(String bfamily) {
+        this.bfamily = bfamily;
+    }
 
     public Book() { }    //无参构造
 
