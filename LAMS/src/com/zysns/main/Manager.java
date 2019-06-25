@@ -1,21 +1,27 @@
+/**
+ * 管理员操作类
+ * 主要用于在系统中对管理员的各种操作
+ */
 package com.zysns.main;
 
 import java.util.Date;
 
 public class Manager {
-    private double mno;  //管理员工号
+    private String mno;  //管理员工号
     private String mname;    //管理员姓名
     private String mpassword;    //管理员密码
     private String msex;    //管理员性别
     private Date mdirthday;    //管理员出生日期
     private String mdept;    //管理员所属部门
-    private double mlead;    //管理员领导
+    private String mlead;    //管理员领导
     private int mlevel;    //管理员等级
 
+    //无参构造
     public Manager() {
     }
 
-    public Manager(double mno, String mname, String mpassword, String msex, Date mdirthday, String mdept, double mlead, int mlevel) {
+    //有参构造
+    public Manager(String mno, String mname, String mpassword, String msex, Date mdirthday, String mdept, String mlead, int mlevel) {
         this.mno = mno;
         this.mname = mname;
         this.mpassword = mpassword;
@@ -26,11 +32,11 @@ public class Manager {
         this.mlevel = mlevel;
     }
 
-    public double getMno() {
+    public String getMno() {
         return mno;
     }
 
-    public void setMno(double mno) {
+    public void setMno(String mno) {
         this.mno = mno;
     }
 
@@ -74,11 +80,11 @@ public class Manager {
         this.mdept = mdept;
     }
 
-    public double getMlead() {
+    public String getMlead() {
         return mlead;
     }
 
-    public void setMlead(double mlead) {
+    public void setMlead(String mlead) {
         this.mlead = mlead;
     }
 
@@ -89,4 +95,5 @@ public class Manager {
     public void setMlevel(int mlevel) {
         this.mlevel = mlevel;
     }
+
 }

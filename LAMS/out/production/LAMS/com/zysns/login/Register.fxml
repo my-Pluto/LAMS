@@ -47,6 +47,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
@@ -82,7 +83,7 @@
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label text="出 生 日 期" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <Label text="出 生 日 期" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <font>
                               <Font size="25.0" />
                            </font>
@@ -90,7 +91,7 @@
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label text="读 者 等 级" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <Label text="读 者 等 级" GridPane.columnIndex="1" GridPane.rowIndex="6">
                            <font>
                               <Font size="25.0" />
                            </font>
@@ -99,11 +100,20 @@
                            </GridPane.margin>
                         </Label>
                         <TextField fx:id="card_id" prefHeight="44.0" prefWidth="657.0" promptText="请输入管理员为您创建的读者证编号" GridPane.columnIndex="2" />
-                        <TextField fx:id="password_text" prefHeight="44.0" prefWidth="657.0" promptText="请设置您的密码" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="password_text" prefHeight="44.0" prefWidth="657.0" promptText="请设置您的密码（不少于6位）" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                         <TextField fx:id="name_text" prefHeight="44.0" prefWidth="657.0" promptText="请输入您的真实姓名" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <DatePicker fx:id="birthday_date" prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <DatePicker fx:id="birthday_date" prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                         <TextField fx:id="age_text" prefHeight="44.0" prefWidth="657.0" promptText="请输入您的年龄" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <ChoiceBox fx:id="reader_grade" prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <ChoiceBox fx:id="reader_grade" prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <Label text="性          别" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <ChoiceBox fx:id="sex" prefHeight="44.0" prefWidth="264.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                      </children>
                   </GridPane>
                </center>

@@ -2,31 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="LAMS">
-      <change afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountDelete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/zysns/select/SelectR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zysns/other/ExitBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/zysns/other/SHA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/inventory/InventoryUpdate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/inventory/InventoryUpdate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LAMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LAMS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/Account.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/Account.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountDelete.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountDelete.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountG.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountG.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountReader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountReader.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/borrow/BorrowJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/borrow/BorrowJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/inventory/InventoryJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/inventory/InventoryJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/login/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/login/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/login/LoginJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/login/LoginJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/login/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/login/Register.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/login/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/login/Register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Jdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Jdbc.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/Select.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/Select.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/Select.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/Select.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/SelectBook.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/SelectBook.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/SelectPerson.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/SelectPerson.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/SelectR.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/SelectR.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/Account.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/Account.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/AccountDelete.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountDelete.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/AccountG.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountG.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/AccountReader.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountReader.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryNew.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryNew.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryUpdate.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryUpdate.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/main/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/SelectJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/select/SelectJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/login/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/login/LoginJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/LoginJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/login/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/LoginView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zysns/login/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/Register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/login/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/login/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/main/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/main/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/main/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/main/Jdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/main/Jdbc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zysns/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/select/SelectPerson.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/select/SelectPerson.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/select/SelectPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/select/SelectPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/select/SelectR.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/select/SelectR.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/main/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/main/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/main/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/main/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/main/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/main/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/other/AlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/other/AlertBox.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,6 +50,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="209" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -89,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="-19">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,22 +116,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zysns/account/Account.java">
+        <entry file="file://$PROJECT_DIR$/src/com/zysns/login/LoginJdbc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="112" column="5" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="112" selection-end-column="5" />
+            <state relative-caret-position="354">
+              <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Reader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/zysns/account/AccountReader.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-684">
-              <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+            <state relative-caret-position="145">
+              <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2709#2710#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/zysns/login/LoginView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1703">
+              <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,12 +186,7 @@
         <option value="$PROJECT_DIR$/src/com/zysns/login/Login.fxml" />
         <option value="$PROJECT_DIR$/src/com/zysns/select/Select.fxml" />
         <option value="$PROJECT_DIR$/src/com/zysns/account/Account.fxml" />
-        <option value="$PROJECT_DIR$/src/com/zysns/main/Book.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/main/Manager.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/main/Reader.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/other/AlertBox.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/other/About.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/login/Register.fxml" />
         <option value="$PROJECT_DIR$/src/com/zysns/login/Login.css" />
         <option value="$PROJECT_DIR$/src/com/zysns/main/Main.fxml" />
         <option value="$PROJECT_DIR$/src/com/zysns/main/MainView.fxml" />
@@ -159,11 +194,6 @@
         <option value="$PROJECT_DIR$/src/com/zysns/inventory/Inventory.fxml" />
         <option value="$PROJECT_DIR$/src/com/zysns/main/demo.fxml" />
         <option value="$PROJECT_DIR$/src/com/zysns/main/Login.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/login/Register.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/main/Window.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/main/Controller.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/login/Login.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/login/LoginView.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/inventory/Inventory.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/inventory/InventoryUpdate.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/borrow/Borrow.java" />
@@ -177,11 +207,27 @@
         <option value="$PROJECT_DIR$/src/com/zysns/select/SelectBook.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/select/SelectPerson.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/select/SelectR.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/main/Main.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/account/Account.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/account/AccountDelete.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/account/AccountG.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/account/AccountReader.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/main/Jdbc.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/main/Controller.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/main/Book.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/other/Exit.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/other/ExitBox.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/other/DESUTil.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/other/SHA.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/main/Window.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/login/Register.fxml" />
+        <option value="$PROJECT_DIR$/src/com/zysns/other/AlertBox.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/login/Register.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/main/Manager.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/main/Reader.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/login/LoginJdbc.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/login/Login.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/login/LoginView.java" />
       </list>
     </option>
   </component>
@@ -190,7 +236,7 @@
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1615" />
-    <option name="height" value="880" />
+    <option name="height" value="879" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -203,8 +249,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,14 +274,21 @@
               <item name="LAMS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="zysns" type="462c0819:PsiDirectoryNode" />
-              <item name="account" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LAMS" type="b2602c69:ProjectViewProjectNode" />
               <item name="LAMS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="zysns" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LAMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LAMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="zysns" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -255,8 +308,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/zysns/inventory" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/zysns/lib/mysql-connector-java-8.0.16.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -505,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561367077054</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="LAMS">
+      <created>1561424559501</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1561424559501</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -515,7 +579,7 @@
     <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19034852" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19571045" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -523,19 +587,19 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3277311" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32913166" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3277311" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39915967" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32867134" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3277311" />
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.34057972" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.34033614" />
       <window_info anchor="bottom" id="Terminal" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -548,7 +612,43 @@
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.3297587" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1930295" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3277311" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3277311" />
+      <window_info anchor="bottom" id="Problems" order="9" />
+      <window_info anchor="bottom" id="Changes" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.34033614" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="JetGradle" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -560,102 +660,12 @@
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LAMS$Main__1_.ic" NAME="Main (1) Coverage Results" MODIFIED="1561431387902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.zysns.main.*</FILTER>
+    </SUITE>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#973#974#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1183#1184#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#1346#1347#0" expanded="true" />
-            <element signature="e#1387#1388#0" expanded="true" />
-            <element signature="e#1423#1424#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/sample.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Login.css" />
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Main.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJJ.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJh.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJc.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/select/SelectPerson.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/select/SelectBook.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2242">
-          <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/select/SelectR.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/account/AccountReader.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/account/Account.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/select/Select.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
@@ -684,14 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Register.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Login.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -700,82 +702,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/other/AlertBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/Inventory.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/login/LoginView.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="17" column="79" lean-forward="true" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryNew.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -903,16 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/select/SelectBook.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1976">
@@ -954,26 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/LoginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="93" column="5" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="93" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/account/AccountDelete.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
@@ -994,10 +899,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/account/AccountJdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/account/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="112" column="5" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="112" selection-end-column="5" />
+        <state relative-caret-position="1786">
+          <caret line="112" column="5" selection-start-line="50" selection-start-column="4" selection-end-line="112" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1006,13 +925,272 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/account/AccountReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-684">
-          <caret line="21" column="66" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+        <state relative-caret-position="1691">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryNew.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Controller.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/stage/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="965" selection-start-line="965" selection-end-line="965" />
+          <folding>
+            <element signature="e#34834#34835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/stage/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="1233" selection-start-line="1233" selection-end-line="1233" />
+          <folding>
+            <element signature="e#41642#41643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/other/Exit.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/other/ExitBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/com/zysns/lib/mysql-connector-java-8.0.16.jar!/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/other/DESUTil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/other/SHA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Register.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="102" column="119" selection-start-line="102" selection-start-column="119" selection-end-line="102" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1741">
+          <caret line="113" column="23" selection-start-line="113" selection-start-column="23" selection-end-line="113" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3203#3204#0" expanded="true" />
+            <element signature="e#3230#3231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/other/AlertBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1235">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1114">
+          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Jdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="71" column="29" lean-forward="true" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/LoginJdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="99" column="32" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2709#2710#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/login/LoginView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1703">
+          <caret line="99" column="11" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>LAMS</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

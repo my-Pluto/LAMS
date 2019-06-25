@@ -1,5 +1,6 @@
 /**
  * 系统图书类
+ * 主要用于对图书的各项操作
  */
 package com.zysns.main;
 
@@ -16,17 +17,9 @@ public class Book {
     private int bquantity;    //图书馆藏数量
     private String bfamily;    //图书所属类别
 
-    public String getBfamily() {
-        return bfamily;
-    }
-
-    public void setBfamily(String bfamily) {
-        this.bfamily = bfamily;
-    }
-
     public Book() { }    //无参构造
 
-    public Book(String bno, String bname, String bauthor, String bpress, Date bdate, String bisbn, String bbookno, int bquantity) {  //有参构造
+    public Book(String bno, String bname, String bauthor, String bpress, Date bdate, String bisbn, String bbookno, int bquantity, String bfamily) {  //有参构造
         this.bno = bno;
         this.bname = bname;
         this.bauthor = bauthor;
@@ -35,6 +28,7 @@ public class Book {
         this.bisbn = bisbn;
         this.bbookno = bbookno;
         this.bquantity = bquantity;
+        this.bfamily = bfamily;
     }
 
     /*getter、setter函数*/
@@ -47,7 +41,7 @@ public class Book {
         this.bno = bno;
     }
 
-    public String getBname() {
+    public String getBname(String 姓名) {
         return bname;
     }
 
@@ -101,5 +95,13 @@ public class Book {
 
     public void setBquantity(int bquantity) {
         this.bquantity = bquantity;
+    }
+
+    public String getBfamily() {
+        return bfamily;
+    }
+
+    public void setBfamily(String bfamily) {
+        this.bfamily = bfamily;
     }
 }

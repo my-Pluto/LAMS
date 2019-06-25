@@ -9,23 +9,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zysns.borrow.Borrow">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zysns.account.AccountG">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="exit_button" mnemonicParsing="false" onAction="#exit" text="Exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="about_button" mnemonicParsing="false" onAction="#about" text="About" />
             </items>
           </Menu>
         </menus>
@@ -38,11 +33,11 @@
                <children>
                   <ImageView fitHeight="99.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../lib/picture/logolow.png" />
+                        <Image url="@../lib/picture/logolow.png" />
                      </image></ImageView>
-                  <Label layoutX="1130.0" layoutY="39.0" text="用户名" />
-                  <Button layoutX="1185.0" layoutY="34.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="退出" />
-                  <Button layoutX="191.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" text="读者证建立">
+                  <Label fx:id="user" layoutX="1130.0" layoutY="39.0" text="用户名" />
+                  <Button fx:id="exit_login_button" layoutX="1185.0" layoutY="34.0" mnemonicParsing="false" onAction="#exit_login" style="-fx-background-color: transparent;" text="退出" />
+                  <Button fx:id="readerID_create_button" layoutX="191.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#readerID_create" prefHeight="49.0" prefWidth="119.0" text="读者证建立">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
@@ -52,16 +47,11 @@
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="429.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" text="账号删除">
+                  <Button fx:id="delete_button" layoutX="429.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#account_delete" prefHeight="49.0" prefWidth="119.0" text="账号删除">
                      <font>
                         <Font name="Microsoft JhengHei" size="15.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="63.0" fitWidth="534.0" layoutX="574.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../lib/picture/logolong.png" />
-                     </image>
-                  </ImageView>
                </children>
             </AnchorPane>
          </top>
@@ -74,15 +64,15 @@
          <left>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书借还">
+                  <Button fx:id="borroe_button" mnemonicParsing="false" onAction="#borrow" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书借还">
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="查询系统">
+                  <Button fx:id="select_button" mnemonicParsing="false" onAction="#select" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="查询系统">
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
-                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书管理">
+                  <Button fx:id="book_button" mnemonicParsing="false" onAction="#book" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书管理">
                      <VBox.margin>
                         <Insets left="2.0" />
                      </VBox.margin></Button>
@@ -166,11 +156,11 @@
                                     <Insets left="18.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField prefHeight="37.0" prefWidth="253.0" promptText="请输入工号" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <TextField prefHeight="37.0" promptText="订输入姓名" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                              <TextField prefHeight="37.0" promptText="请输入设置密码" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                              <ComboBox prefHeight="37.0" prefWidth="223.0" promptText="请选择管理员等级" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                              <DatePicker prefHeight="37.0" prefWidth="254.0" promptText="请选择出生日期" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                              <TextField fx:id="ID_texxt" prefHeight="37.0" prefWidth="253.0" promptText="请输入工号" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="name_text" prefHeight="37.0" promptText="请输入姓名" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <TextField fx:id="password_text" prefHeight="37.0" promptText="请输入设置密码" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                              <ComboBox fx:id="message_grade_combobox" prefHeight="37.0" prefWidth="223.0" promptText="请选择管理员等级" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <DatePicker fx:id="birthday_date" prefHeight="37.0" prefWidth="254.0" promptText="请选择出生日期" GridPane.columnIndex="5" GridPane.rowIndex="5" />
                               <Label text="出生日期" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                  <font>
                                     <Font size="20.0" />
@@ -178,7 +168,7 @@
                                  <GridPane.margin>
                                     <Insets left="18.0" />
                                  </GridPane.margin></Label>
-                              <ComboBox prefHeight="37.0" prefWidth="222.0" promptText="请选择性别" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <ComboBox fx:id="sex_combobox" prefHeight="37.0" prefWidth="222.0" promptText="请选择性别" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                               <Label text="所属领导" GridPane.columnIndex="4" GridPane.rowIndex="7">
                                  <font>
                                     <Font size="20.0" />
@@ -195,11 +185,11 @@
                                     <Insets left="18.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField prefHeight="37.0" prefWidth="253.0" promptText="请输入所属领导" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-                              <TextField prefHeight="37.0" prefWidth="253.0" promptText="请输入所属部门" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <TextField fx:id="leader_text" prefHeight="37.0" prefWidth="253.0" promptText="请输入所属领导" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                              <TextField fx:id="dept_text" prefHeight="37.0" prefWidth="253.0" promptText="请输入所属部门" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                            </children>
                         </GridPane>
-                        <Button layoutX="499.0" layoutY="550.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="119.0" text="创建">
+                        <Button fx:id="create_button" layoutX="499.0" layoutY="550.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="119.0" text="创建">
                            <font>
                               <Font size="20.0" />
                            </font>

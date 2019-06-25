@@ -10,7 +10,7 @@ public class InventoryJdbc extends com.zysns.main.Jdbc {
         if (Ret()) {
             String sqlString = "INSERT" +
                     "INTO `图书`(`图书编号`,`图书名称`,`图书作者`,`出版社`,`出版时间`,`ISBN`,`书架编号`,`所属类别`,`馆藏数量` )" +
-                    "VALUES(`" + book.getBno()+ "`,`" + book.getBname() + "`,`" + book.getBauthor() + "`,`" + book.getBpress() + "`,`" +book.getBdate() + "`,`" + book.getBisbn() + "`," +
+                    "VALUES(`" + book.getBno()+ "`,`" + book.getBname(getRs().getString("姓名")) + "`,`" + book.getBauthor() + "`,`" + book.getBpress() + "`,`" +book.getBdate() + "`,`" + book.getBisbn() + "`," +
                     "`" + book.getBbookno()+ "`," + "`" + book.getBfamily() + "`,`" + book.getBquantity() + "`)";
             setRs(getStmt().executeQuery(sqlString));
             com.zysns.other.AlertBox.showalertbox("提示","数据库连接成功！");
@@ -23,7 +23,7 @@ public class InventoryJdbc extends com.zysns.main.Jdbc {
         if(getRs().next()) {
             if (Ret()) {
                 String sqlString = "UPDATE `图书`" +
-                        "SET  `图书名称`=`" + book.getBname() + "`, `图书作者`=`" +book.getBauthor() + ", `出版社`=`" + book.getBpress()+ "`, `出版时间`=`" + book.getBdate()+ "`, " +
+                        "SET  `图书名称`=`" + book.getBname(getRs().getString("姓名")) + "`, `图书作者`=`" +book.getBauthor() + ", `出版社`=`" + book.getBpress()+ "`, `出版时间`=`" + book.getBdate()+ "`, " +
                         "`ISBN`=`" +  book.getBisbn() + "`, `书架编号` =`" +  book.getBbookno()+ "`,`所属类别`=`" +  book.getBfamily() + "`,`馆藏数量=`"+book.getBquantity()  + "`" +
                         "WHERE `图书编号` =`" +  book.getBno() + "`";
                 setRs(getStmt().executeQuery(sqlString));

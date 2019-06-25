@@ -1,20 +1,27 @@
+/**
+ * 读者类
+ * 主要用于对系统中读者的操作
+ */
 package com.zysns.main;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Reader {
-    private double rno;    //读者编号
+    private String rno;    //读者编号
     private String rpassword;    //读者密码
     private String rname;    //读者姓名
     private String rsex;    //读者性别
-    private Date rbrithday;    //读者出生日期
-    private Date rcreate;    //读者证创建日期
-    private int rpower;    //读者等级
+    private LocalDate rbrithday;    //读者出生日期
+    private LocalDate rcreate;    //读者证创建日期
+    private String rpower;    //借阅权限，主要分为成人读者1、儿童读者0等
 
+    //无参构造
     public Reader() {
     }
 
-    public Reader(double rno, String rpassword, String rname, String rsex, Date rbrithday, Date rcreate, int rpower) {
+    //有参构造
+    public Reader(String rno, String rpassword, String rname, String rsex, LocalDate rbrithday, LocalDate rcreate, String rpower) {
         this.rno = rno;
         this.rpassword = rpassword;
         this.rname = rname;
@@ -24,11 +31,12 @@ public class Reader {
         this.rpower = rpower;
     }
 
-    public double getRno() {
+    //getter、setter
+    public String getRno() {
         return rno;
     }
 
-    public void setRno(double rno) {
+    public void setRno(String rno) {
         this.rno = rno;
     }
 
@@ -56,27 +64,27 @@ public class Reader {
         this.rsex = rsex;
     }
 
-    public Date getRbrithday() {
+    public LocalDate getRbrithday() {
         return rbrithday;
     }
 
-    public void setRbrithday(Date rbrithday) {
+    public void setRbrithday(LocalDate rbrithday) {
         this.rbrithday = rbrithday;
     }
 
-    public Date getRcreate() {
+    public LocalDate getRcreate() {
         return rcreate;
     }
 
-    public void setRcreate(Date rcreate) {
+    public void setRcreate(LocalDate rcreate) {
         this.rcreate = rcreate;
     }
 
-    public int getRpower() {
+    public String getRpower() {
         return rpower;
     }
 
-    public void setRpower(int rpower) {
+    public void setRpower(String rpower) {
         this.rpower = rpower;
     }
 }

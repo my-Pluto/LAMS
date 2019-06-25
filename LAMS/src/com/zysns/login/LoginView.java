@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import static com.zysns.other.About.showabout;
+import static com.zysns.other.ExitBox.showexitbox;
 
 public class LoginView extends Window implements Initializable  {
 
@@ -72,6 +73,10 @@ public class LoginView extends Window implements Initializable  {
     @FXML
     //点击退出后返回登录界面
     void exit_login() throws IOException {
+        //将当前用户信息清除
+        setW_manager(null);
+        setW_reader(null);
+        //跳转到登录界面
         Parent root = FXMLLoader.load(getClass().getResource("../login/Login.fxml"));
         getWindow().setScene(new Scene(root, 1280, 800));
     }
@@ -79,7 +84,11 @@ public class LoginView extends Window implements Initializable  {
     @FXML
     //点击exit后退出系统
     void exit() {
-        System.exit(0);
+        boolean answer = showexitbox("提示", "您是否真的要关闭当前系统？");
+        if(answer) {
+            System.exit(0);
+        }
+
     }
 
     @FXML
@@ -88,9 +97,15 @@ public class LoginView extends Window implements Initializable  {
         showabout();
     }
 
+    //界面初始化
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        if (getW_manager() != null){
+            user.setText(getW_manager().getMname());
+        }
+        else {
+            user.setText(getW_reader().getRname());
+        }
     }
 }
 

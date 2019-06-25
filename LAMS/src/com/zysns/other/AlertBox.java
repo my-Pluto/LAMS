@@ -19,8 +19,8 @@ public class AlertBox {
 
         window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle(titile);
-        window.setWidth(300);
-        window.setHeight(200);
+        window.setWidth(350);
+        window.setHeight(250);
 
         Label label = new Label(message);
 
@@ -30,7 +30,7 @@ public class AlertBox {
         VBox layout = new VBox(10);
         layout.getChildren().addAll(label, button);
         layout.setAlignment(Pos.CENTER);
-
+        layout.setAlignment(Pos.CENTER);
         Scene scene = new Scene(layout);
         window.setScene(scene);
         window.showAndWait();
