@@ -4,16 +4,15 @@ import com.zysns.main.Borrow_Book;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.Period;
 
 import static com.zysns.other.AlertBox.showalertbox;
 
 public class BorrowJdbc extends com.zysns.main.Jdbc {
 
     //进行图书借阅工作
+    //重要提示！！！一本书一天只能借阅一次，无论当天是否归还，改天均不能再借阅该书！！！
     public static void borrow(String Rno, String Bno) throws Exception{
         //清空结果集
         setRs(null);

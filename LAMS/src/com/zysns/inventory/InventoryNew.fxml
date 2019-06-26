@@ -35,7 +35,7 @@
                      <image>
                         <Image url="@../lib/picture/logolow.png" />
                      </image></ImageView>
-                  <Label layoutX="1130.0" layoutY="39.0" text="用户名" />
+                  <Label fx:id="user" layoutX="1130.0" layoutY="39.0" text="用户名" />
                   <Button fx:id="exit_login_button" layoutX="1185.0" layoutY="34.0" mnemonicParsing="false" onAction="#exit_login" style="-fx-background-color: transparent;" text="退出" />
                   <Button layoutX="191.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" style="-fx-background-color: linear-gradient(#FFB90F, #FFFF00);" text="新书录入">
                      <font>
@@ -125,7 +125,7 @@
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField disable="true" editable="false" prefHeight="37.0" promptText="系统自动生成" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="book_no" editable="false" prefHeight="37.0" promptText="请输入八位图书编号" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                               <Label prefHeight="37.0" prefWidth="92.0" text="图书名称" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="STKaiti" size="20.0" />

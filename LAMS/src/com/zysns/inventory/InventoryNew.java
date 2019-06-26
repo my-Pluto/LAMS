@@ -1,5 +1,6 @@
 package com.zysns.inventory;
 
+import com.zysns.main.Book;
 import com.zysns.main.Window;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static com.zysns.other.About.showabout;
+import static com.zysns.other.AlertBox.showalertbox;
+import static com.zysns.other.ExitBox.showexitbox;
 
 public class InventoryNew extends Window implements Initializable {
 
@@ -65,8 +68,14 @@ public class InventoryNew extends Window implements Initializable {
     private ComboBox<?> bfamily;
 
     @FXML
-    void new_book_jdbc() {
+    private TextField book_no;
 
+    @FXML
+    private Label user;
+
+    @FXML
+    void new_book_jdbc() {
+        Book book = new Book();
     }
 
     @FXML
@@ -83,14 +92,25 @@ public class InventoryNew extends Window implements Initializable {
 
     @FXML
     void account() throws IOException {
+        if (getW_manager() == null){
+            showalertbox("警告", "对不起，您的账号没有权限使用该功能");
+            return;
+        }
         Parent account = FXMLLoader.load(getClass().getResource("../account/account.fxml"));
         getWindow().setScene(new Scene(account, 1280, 800));
     }
 
     @FXML
     void exit_login() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../login/Login.fxml"));
-        getWindow().setScene(new Scene(root, 1280, 800));
+        boolean answer = showexitbox("提示", "您是否真的要退出当前登录的账号？");
+        if (answer){
+            //将当前用户信息清除
+            setW_manager(null);
+            setW_reader(null);
+            //跳转到登录界面
+            Parent root = FXMLLoader.load(getClass().getResource("../login/Login.fxml"));
+            getWindow().setScene(new Scene(root, 1280, 800));
+        }
     }
 
     @FXML
@@ -101,7 +121,10 @@ public class InventoryNew extends Window implements Initializable {
 
     @FXML
     void exit() {
-        System.exit(0);
+        boolean answer = showexitbox("提示", "您是否真的要关闭当前系统？");
+        if(answer) {
+            System.exit(0);
+        }
     }
 
     @FXML
@@ -111,6 +134,11 @@ public class InventoryNew extends Window implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        if (getW_manager() != null){
+            user.setText(getW_manager().getMname());
+        }
+        else {
+            user.setText(getW_reader().getRname());
+        }
     }
 }

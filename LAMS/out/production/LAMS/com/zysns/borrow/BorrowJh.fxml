@@ -105,20 +105,20 @@
                            </font>
                         </Label>
                         <TextField fx:id="readerID" layoutX="387.0" layoutY="14.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入您的读者证号" />
-                        <Button fx:id="huan_button" layoutX="1026.0" layoutY="564.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="129.0" text="归还">
+                        <Button fx:id="huan_button" layoutX="1026.0" layoutY="564.0" mnemonicParsing="false" onAction="#still_book" prefHeight="63.0" prefWidth="129.0" text="归还">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Button>
                         <TableView fx:id="tableview" layoutX="19.0" layoutY="74.0" prefHeight="475.0" prefWidth="1136.0">
                           <columns>
-                            <TableColumn prefWidth="275.0" text="图书编号" />
-                            <TableColumn prefWidth="227.0" text="图书名称" />
-                              <TableColumn prefWidth="272.0" text="借阅时间" />
-                              <TableColumn prefWidth="361.0" text="最晚归还信息" />
+                            <TableColumn fx:id="book_no" prefWidth="275.0" text="图书编号" />
+                            <TableColumn fx:id="book_name" prefWidth="227.0" text="图书名称" />
+                              <TableColumn fx:id="borroe_date" prefWidth="272.0" text="借阅时间" />
+                              <TableColumn fx:id="still_date" prefWidth="361.0" text="最晚归还时间" />
                           </columns>
                         </TableView>
-                        <Button fx:id="select_h_button" layoutX="877.0" layoutY="564.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="129.0" text="查询">
+                        <Button fx:id="select_h_button" layoutX="877.0" layoutY="564.0" mnemonicParsing="false" onAction="#select_h" prefHeight="63.0" prefWidth="129.0" text="查询">
                            <font>
                               <Font size="20.0" />
                            </font>

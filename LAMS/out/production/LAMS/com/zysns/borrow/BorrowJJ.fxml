@@ -98,8 +98,8 @@
                               <Font size="30.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="bookno" layoutX="387.0" layoutY="282.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入图书证号" />
-                        <Button fx:id="borrow_book_button" layoutX="476.0" layoutY="449.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="129.0" text="借阅">
+                        <TextField fx:id="bookno" layoutX="387.0" layoutY="282.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入图书编号" />
+                        <Button fx:id="borrow_book_button" layoutX="476.0" layoutY="449.0" mnemonicParsing="false" onAction="#borrow_book" prefHeight="63.0" prefWidth="129.0" text="借阅">
                            <font>
                               <Font size="20.0" />
                            </font>
