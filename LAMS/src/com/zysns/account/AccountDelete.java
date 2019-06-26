@@ -114,7 +114,15 @@ public class AccountDelete extends Window implements Initializable {
     @FXML
     void delete() throws Exception {
         String family = account_family_combobox.getValue();
+        if (family == null || family.equals("")){
+            showalertbox("警告", "请选择需要删除的账号类型！");
+            return;
+        }
         String no = Id_text.getText();
+        if (no == null || no.equals("")){
+            showalertbox("警告", "请输入需要删除的账号！");
+            return;
+        }
         delete_account(no, family, getW_manager().getMno());
     }
     @FXML

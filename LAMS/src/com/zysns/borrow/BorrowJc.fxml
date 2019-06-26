@@ -105,17 +105,18 @@
                            </font>
                         </Label>
                         <TextField fx:id="readerID" layoutX="387.0" layoutY="14.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入需要查询的读者证号" />
-                        <Button fx:id="select_c_button" layoutX="1031.0" layoutY="564.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="129.0" text="查询">
+                        <Button fx:id="select_c_button" layoutX="1031.0" layoutY="564.0" mnemonicParsing="false" onAction="#select_c" prefHeight="63.0" prefWidth="129.0" text="查询">
                            <font>
                               <Font size="20.0" />
                            </font>
                         </Button>
                         <TableView fx:id="tableview" layoutX="19.0" layoutY="74.0" prefHeight="475.0" prefWidth="1136.0">
                           <columns>
-                            <TableColumn prefWidth="275.0" text="图书编号" />
-                            <TableColumn prefWidth="227.0" text="图书名称" />
-                              <TableColumn prefWidth="272.0" text="借阅时间" />
-                              <TableColumn prefWidth="361.0" text="最晚归还信息" />
+                            <TableColumn fx:id="book_ID" prefWidth="226.0" text="图书编号" />
+                            <TableColumn fx:id="book_name" prefWidth="287.0" text="图书名称" />
+                              <TableColumn fx:id="borrow_date" prefWidth="261.0" text="借阅时间" />
+                              <TableColumn fx:id="still_date" prefWidth="228.0" text="最晚归还信息" />
+                              <TableColumn fx:id="yes_or_no" prefWidth="121.0" text="是否归还" />
                           </columns>
                         </TableView>
                      </children>

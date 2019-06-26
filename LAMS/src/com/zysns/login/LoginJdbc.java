@@ -28,7 +28,7 @@ public class LoginJdbc extends com.zysns.main.Jdbc {
                 setRs(getStmt().executeQuery(sqlString));
             }
             if (!getRs().next()){
-                showalertbox("警告", "登录失败！请检查您输入的账号、密码以及登录类型!");
+                showalertbox("警告", "登录失败！\n请检查您输入的账号、密码以及登录类型!");
                 return false;
             }
             else {

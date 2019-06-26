@@ -111,6 +111,8 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
                               <Label text="读者证号" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -129,7 +131,7 @@
                                     <Font size="20.0" />
                                  </font>
                               </Label>
-                              <Label text="读者性别" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <Label text="读者性别" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -145,7 +147,7 @@
                                     <Insets left="18.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label prefHeight="37.0" text="读者等级" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <Label prefHeight="37.0" text="读者等级" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -156,7 +158,7 @@
                               <TextField fx:id="ID_text" prefHeight="37.0" prefWidth="253.0" promptText="请输入读者证号" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                               <TextField fx:id="name_button" prefHeight="37.0" promptText="请输入读者姓名" GridPane.columnIndex="5" GridPane.rowIndex="1" />
                               <TextField fx:id="age_text" prefHeight="37.0" promptText="请输入读者年龄" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                              <ComboBox fx:id="grade_combobox" prefHeight="37.0" prefWidth="223.0" promptText="请选择读者等级" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="grade_combobox" prefHeight="37.0" prefWidth="223.0" promptText="请选择读者等级" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                               <DatePicker fx:id="birthday_date" prefHeight="37.0" prefWidth="254.0" promptText="请选择出生日期" GridPane.columnIndex="5" GridPane.rowIndex="5" />
                               <Label text="出生日期" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                  <font>
@@ -165,10 +167,19 @@
                                  <GridPane.margin>
                                     <Insets left="18.0" />
                                  </GridPane.margin></Label>
-                              <ComboBox fx:id="sex_combobox" prefHeight="37.0" prefWidth="222.0" promptText="请选择读者性别" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <ComboBox fx:id="sex_combobox" prefHeight="37.0" prefWidth="222.0" promptText="请选择读者性别" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <TextField fx:id="password_text" prefHeight="37.0" promptText="请输入密码（不少于6位）" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label text="密      码" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="18.0" />
+                                 </GridPane.margin>
+                              </Label>
                            </children>
                         </GridPane>
-                        <Button fx:id="creage_button" layoutX="499.0" layoutY="550.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="119.0" text="创建">
+                        <Button fx:id="creage_button" layoutX="499.0" layoutY="550.0" mnemonicParsing="false" onAction="#create_reader" prefHeight="61.0" prefWidth="119.0" text="创建">
                            <font>
                               <Font size="20.0" />
                            </font>

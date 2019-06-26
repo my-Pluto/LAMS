@@ -100,7 +100,6 @@ public class LoginView extends Window implements Initializable  {
         if(answer) {
             System.exit(0);
         }
-
     }
 
     @FXML

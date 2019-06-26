@@ -166,7 +166,12 @@ public class AccountG extends Window implements Initializable {
     void create() throws Exception {
         Manager manager = new Manager();
         //获取输入的工号
-        manager.setMno(ID_texxt.getText());
+        String ID = ID_texxt.getText();
+        if (ID == null || ID.equals("")){
+            showalertbox("警告", "您输入的信息不全");
+            return;
+        }
+        manager.setMno(ID);
         //获取输入的密码，并检验是否小于6位，如小于，要求注册者重新输入
         String passward = password_text.getText();
         if (passward.length() < 6) {
@@ -183,22 +188,41 @@ public class AccountG extends Window implements Initializable {
         }
         manager.setMname(name);
         //获取性别
-        manager.setMsex(sex_combobox.getValue());
+        String sex = sex_combobox.getValue();
+        if (sex == null || sex.equals("")){
+            showalertbox("警告", "您输入的信息不全");
+            return;
+        }
+        manager.setMsex(sex);
         //获取生日，对输入的生日进行检验，如果存在明显错误，则要求重新输入
         LocalDate date = birthday_date.getValue();
+        if (date == null){
+            showalertbox("警告", "您输入的信息不全");
+            return;
+        }
         int days = Period.between(date, LocalDate.now()).getYears();
         if ((days <= 17) || days >= 66) {
-            showalertbox("警告", "您输入的年龄有误\n请检查您的输入");
+            showalertbox("警告", "您输入的出生日期有误\n请检查您的输入");
             return;
         }
         manager.setMdirthday(date);
         //获取管理员等级
+        String grade = message_grade_combobox.getValue();
+        if (grade == null || grade.equals("")){
+            showalertbox("警告", "您输入的信息不全");
+            return;
+        }
         if (Integer.parseInt(message_grade_combobox.getValue()) <= Integer.parseInt(getW_manager().getMlevel())){
             showalertbox("警告", "对不起，您创建的账号高于您的权限，创建失败！");
             return;
         }
         manager.setMlevel(message_grade_combobox.getValue());
         //设置管理员所在部门
+        String dept = dept_text.getText();
+        if (dept == null || dept.equals("")){
+            showalertbox("警告", "您输入的信息不全");
+            return;
+        }
         manager.setMdept(dept_text.getText());
         //获取管理员所属领导（即创建该账号的账号）
         manager.setMlead(getW_manager().getMno());
@@ -210,11 +234,11 @@ public class AccountG extends Window implements Initializable {
         //界面初始化，此处主要用于初始化用户名位置信息
         if (getW_manager() != null){
             user.setText(getW_manager().getMname());
+            leader_text.setText(getW_manager().getMno());
         }
         else {
             user.setText(getW_reader().getRname());
         }
-        leader_text.setText(getW_manager().getMno());
         sex_combobox.getItems().addAll("男", "女");
         message_grade_combobox.getItems().addAll("1", "2", "3", "4", "5");
     }
