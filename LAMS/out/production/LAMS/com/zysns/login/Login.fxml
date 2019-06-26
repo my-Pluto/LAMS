@@ -41,10 +41,10 @@
                   <Image url="@../lib/picture/backimage.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="477.0" layoutY="430.0" text="用户名：" />
-            <TextField fx:id="user_text" layoutX="586.0" layoutY="359.0" promptText="user" />
-            <Label layoutX="478.0" layoutY="364.0" text="密   码：" />
-            <PasswordField fx:id="password_text" layoutX="586.0" layoutY="425.0" promptText="password" />
+            <Label layoutX="477.0" layoutY="430.0" text="密  码：" />
+            <TextField fx:id="user_text" layoutX="586.0" layoutY="359.0" promptText="读者证号/工号" />
+            <Label layoutX="478.0" layoutY="364.0" text="用户名：" />
+            <PasswordField fx:id="password_text" layoutX="586.0" layoutY="425.0" promptText="密码" />
             <Button fx:id="registerbutton" layoutX="707.0" layoutY="507.0" mnemonicParsing="false" onAction="#register" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ffff00; -fx-background-radius: 6;" text="注册" />
             <Button fx:id="loginbuttion" layoutX="477.0" layoutY="507.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #f0ffff; -fx-background-radius: 6;" text="登录" />
             <Separator layoutX="-2.0" layoutY="742.0" prefHeight="0.0" prefWidth="1280.0" />

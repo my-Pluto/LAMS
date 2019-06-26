@@ -99,8 +99,8 @@ public class Register extends Window implements Initializable {
         reader.setRsex(sex.getValue());
         //获取读者的生日，对读者输入的生日进行检验，如果存在明显错误，则要求读者重新输入
         LocalDate date = birthday_date.getValue();
-        int days = Period.between(date, LocalDate.now()).getDays();
-        if ((days <= 0) || days >= 36500) {
+        int days = Period.between(date, LocalDate.now()).getYears();
+        if ((days <= 0) || days >= 100) {
             showalertbox("警告", "您输入的年龄有误\n请检查您的输入或联系管理员");
             return;
         }

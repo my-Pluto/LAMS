@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import static com.zysns.other.About.showabout;
+import static com.zysns.other.AlertBox.showalertbox;
 import static com.zysns.other.ExitBox.showexitbox;
 
 public class LoginView extends Window implements Initializable  {
@@ -59,6 +60,10 @@ public class LoginView extends Window implements Initializable  {
     @FXML
     //显示图书管理界面
     void book() throws IOException {
+        if (getW_manager() == null){
+            showalertbox("警告", "对不起，您的账号没有权限使用该功能");
+            return;
+        }
         Parent book = FXMLLoader.load(getClass().getResource("../inventory/Inventory.fxml"));
         getWindow().setScene(new Scene(book, 1280, 800));
     }
@@ -66,6 +71,10 @@ public class LoginView extends Window implements Initializable  {
     @FXML
     //显示账户管理界面
     void account() throws IOException {
+        if (getW_manager() == null){
+            showalertbox("警告", "对不起，您的账号没有权限使用该功能");
+            return;
+        }
         Parent account = FXMLLoader.load(getClass().getResource("../account/account.fxml"));
         getWindow().setScene(new Scene(account, 1280, 800));
     }
@@ -73,12 +82,15 @@ public class LoginView extends Window implements Initializable  {
     @FXML
     //点击退出后返回登录界面
     void exit_login() throws IOException {
-        //将当前用户信息清除
-        setW_manager(null);
-        setW_reader(null);
-        //跳转到登录界面
-        Parent root = FXMLLoader.load(getClass().getResource("../login/Login.fxml"));
-        getWindow().setScene(new Scene(root, 1280, 800));
+        boolean answer = showexitbox("提示", "您是否真的要退出当前登录的账号？");
+        if (answer){
+            //将当前用户信息清除
+            setW_manager(null);
+            setW_reader(null);
+            //跳转到登录界面
+            Parent root = FXMLLoader.load(getClass().getResource("../login/Login.fxml"));
+            getWindow().setScene(new Scene(root, 1280, 800));
+        }
     }
 
     @FXML
@@ -100,6 +112,7 @@ public class LoginView extends Window implements Initializable  {
     //界面初始化
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //界面初始化，此处主要用于初始化用户名位置信息
         if (getW_manager() != null){
             user.setText(getW_manager().getMname());
         }

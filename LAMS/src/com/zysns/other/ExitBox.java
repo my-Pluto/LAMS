@@ -9,6 +9,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
@@ -44,6 +45,12 @@ public class ExitBox {
         yes_button.setOnAction(e -> {
             setAnswer(true);
             window.close();
+        });
+        yes_button.setOnKeyReleased(e -> {
+            if (e.getCode() == KeyCode.ENTER){
+                setAnswer(true);
+                window.close();
+            }
         });
         Button no_button = new Button("取消");
         no_button.setOnAction(e -> {

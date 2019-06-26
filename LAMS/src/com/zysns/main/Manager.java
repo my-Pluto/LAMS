@@ -4,6 +4,7 @@
  */
 package com.zysns.main;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Manager {
@@ -11,17 +12,17 @@ public class Manager {
     private String mname;    //管理员姓名
     private String mpassword;    //管理员密码
     private String msex;    //管理员性别
-    private Date mdirthday;    //管理员出生日期
+    private LocalDate mdirthday;    //管理员出生日期
     private String mdept;    //管理员所属部门
     private String mlead;    //管理员领导
-    private int mlevel;    //管理员等级
+    private String mlevel;    //管理员等级
 
     //无参构造
     public Manager() {
     }
 
     //有参构造
-    public Manager(String mno, String mname, String mpassword, String msex, Date mdirthday, String mdept, String mlead, int mlevel) {
+    public Manager(String mno, String mname, String mpassword, String msex, LocalDate mdirthday, String mdept, String mlead, String mlevel) {
         this.mno = mno;
         this.mname = mname;
         this.mpassword = mpassword;
@@ -64,11 +65,11 @@ public class Manager {
         this.msex = msex;
     }
 
-    public Date getMdirthday() {
+    public LocalDate getMdirthday() {
         return mdirthday;
     }
 
-    public void setMdirthday(Date mdirthday) {
+    public void setMdirthday(LocalDate mdirthday) {
         this.mdirthday = mdirthday;
     }
 
@@ -88,11 +89,11 @@ public class Manager {
         this.mlead = mlead;
     }
 
-    public int getMlevel() {
+    public String getMlevel() {
         return mlevel;
     }
 
-    public void setMlevel(int mlevel) {
+    public void setMlevel(String mlevel) {
         this.mlevel = mlevel;
     }
 

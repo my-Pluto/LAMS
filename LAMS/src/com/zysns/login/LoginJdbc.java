@@ -90,9 +90,9 @@ public class LoginJdbc extends com.zysns.main.Jdbc {
             manager.setMname(getRs().getString("姓名"));
             manager.setMsex(getRs().getString("性别"));
             manager.setMdept(getRs().getString("所属部门"));
-            manager.setMdirthday(getRs().getDate("出生日期"));
+            manager.setMdirthday(getRs().getDate("出生日期").toLocalDate());
             manager.setMlead(getRs().getString("所属领导"));
-            manager.setMlevel(getRs().getInt("管理员等级"));
+            manager.setMlevel(getRs().getString("管理员等级"));
         }
         return manager;
     }
