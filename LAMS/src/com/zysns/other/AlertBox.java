@@ -37,6 +37,7 @@ public class AlertBox {
         layout.setAlignment(Pos.CENTER);
         Scene scene = new Scene(layout);
         window.setScene(scene);
+        window.setResizable(false);
         window.showAndWait();
     }
 }

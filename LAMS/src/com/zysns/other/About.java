@@ -28,6 +28,7 @@ public class About {
         vBox.setAlignment(Pos.CENTER);
         Scene scene = new Scene(vBox);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.showAndWait();
     }
 }

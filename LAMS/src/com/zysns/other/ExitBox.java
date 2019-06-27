@@ -67,6 +67,7 @@ public class ExitBox {
         layout_button.setAlignment(Pos.CENTER);
         Scene scene = new Scene(layout);
         window.setScene(scene);
+        window.setResizable(false);
         window.showAndWait();
         return answer;
     }

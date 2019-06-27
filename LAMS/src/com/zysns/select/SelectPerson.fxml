@@ -100,7 +100,7 @@
                            </font>
                         </Label>
                         <TextField fx:id="readerID" layoutX="387.0" layoutY="14.0" prefHeight="40.0" prefWidth="400.0" promptText="请输入需要查询的读者证号" />
-                        <Button fx:id="select_reader_button" layoutX="1031.0" layoutY="564.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="129.0" text="查询">
+                        <Button fx:id="select_reader_button" layoutX="1031.0" layoutY="564.0" mnemonicParsing="false" onAction="#select_reader" prefHeight="63.0" prefWidth="129.0" text="查询">
                            <font>
                               <Font size="20.0" />
                            </font>
