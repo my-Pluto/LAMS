@@ -89,7 +89,7 @@
                <center>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button fx:id="update_book_button" layoutX="498.0" layoutY="556.0" mnemonicParsing="false" onAction="#update_book" prefHeight="63.0" prefWidth="129.0" text="修改">
+                        <Button fx:id="update_book_button" layoutX="361.0" layoutY="554.0" mnemonicParsing="false" onAction="#update_book" prefHeight="63.0" prefWidth="129.0" text="修改">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -124,7 +124,7 @@
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField disable="true" prefHeight="37.0" promptText="请输入图书编号" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="bookno" disable="true" prefHeight="37.0" promptText="图书编号" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label prefHeight="37.0" prefWidth="92.0" text="图书名称" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="STKaiti" size="20.0" />
@@ -206,6 +206,11 @@
                         </Label>
                         <TextField fx:id="bookID" layoutX="434.0" layoutY="50.0" prefHeight="37.0" prefWidth="239.0" promptText="请输入图书编号" />
                         <Button fx:id="select_boob_button" layoutX="701.0" layoutY="48.0" mnemonicParsing="false" onAction="#select_book" prefHeight="41.0" prefWidth="95.0" text="查询">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="delete_button" layoutX="554.0" layoutY="554.0" mnemonicParsing="false" onAction="#delete" prefHeight="63.0" prefWidth="129.0" text="删除">
                            <font>
                               <Font size="20.0" />
                            </font>

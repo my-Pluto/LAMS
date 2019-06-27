@@ -4,6 +4,7 @@
  */
 package com.zysns.main;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Book {
@@ -11,7 +12,7 @@ public class Book {
     private String bname;    //图书名称
     private String bauthor;    //图书作者
     private String bpress;    //图书出版社
-    private Date bdate;    //图书出版时间
+    private LocalDate bdate;    //图书出版时间
     private String bisbn;    //图书ISBN
     private String bbookno;   //图书所在书架编号
     private int bquantity;    //图书馆藏数量
@@ -19,7 +20,7 @@ public class Book {
 
     public Book() { }    //无参构造
 
-    public Book(String bno, String bname, String bauthor, String bpress, Date bdate, String bisbn, String bbookno, int bquantity, String bfamily) {  //有参构造
+    public Book(String bno, String bname, String bauthor, String bpress, LocalDate bdate, String bisbn, String bbookno, int bquantity, String bfamily) {  //有参构造
         this.bno = bno;
         this.bname = bname;
         this.bauthor = bauthor;
@@ -41,7 +42,7 @@ public class Book {
         this.bno = bno;
     }
 
-    public String getBname(String 姓名) {
+    public String getBname() {
         return bname;
     }
 
@@ -65,11 +66,11 @@ public class Book {
         this.bpress = bpress;
     }
 
-    public Date getBdate() {
+    public LocalDate getBdate() {
         return bdate;
     }
 
-    public void setBdate(Date bdate) {
+    public void setBdate(LocalDate bdate) {
         this.bdate = bdate;
     }
 

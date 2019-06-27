@@ -4,51 +4,114 @@ import com.zysns.main.Book;
 
 import java.sql.SQLException;
 
+import static com.zysns.other.AlertBox.showalertbox;
+
 public class InventoryJdbc extends com.zysns.main.Jdbc {
-    public static void inventoryone(Book book) throws SQLException {
+    public static void create_book(Book book) throws SQLException {
         //添加图书信息:编号，名称，作者，出版社，日期，ISBN，书架编号
         if (Ret()) {
-            String sqlString = "INSERT" +
-                    "INTO `图书`(`图书编号`,`图书名称`,`图书作者`,`出版社`,`出版时间`,`ISBN`,`书架编号`,`所属类别`,`馆藏数量` )" +
-                    "VALUES(`" + book.getBno()+ "`,`" + book.getBname(getRs().getString("姓名")) + "`,`" + book.getBauthor() + "`,`" + book.getBpress() + "`,`" +book.getBdate() + "`,`" + book.getBisbn() + "`," +
-                    "`" + book.getBbookno()+ "`," + "`" + book.getBfamily() + "`,`" + book.getBquantity() + "`)";
+            setRs(null);
+            String sqlString = "SELECT * FROM `图书` WHERE `图书编号` = '" + book.getBno() + "'";
             setRs(getStmt().executeQuery(sqlString));
-            com.zysns.other.AlertBox.showalertbox("提示","数据库连接成功！");
+            if (getRs().next()){
+                showalertbox("警告", "您输入的图书编号已存在！\n请检查输入！");
+                return;
+            }
+
+            setRs(null);
+            sqlString = "SELECT *FROM `书架` WHERE `书架编号` = '" + book.getBbookno() + "'";
+            setRs(getStmt().executeQuery(sqlString));
+            if (!getRs().next()){
+                showalertbox("警告", "您输入的书架编号不存在！\n请检查输入！");
+                return;
+            }
+            else if (!getRs().getString("所属类别").equals(book.getBfamily())){
+                showalertbox("警告", "您输入的书架编号和存放图书的所属类别不符！\n请检查输入！");
+                return;
+            }
+
+            setRs(null);
+            sqlString = "INSERT INTO `图书`(`图书编号`,`图书名称`,`图书作者`,`出版社`,`出版时间`,`ISBN`,`书架编号`,`所属类别`,`馆藏数量` ) VALUES('" +
+                    book.getBno() + "','" + book.getBname() + "','" + book.getBauthor() + "',' " + book.getBpress() + "','" +
+                    book.getBdate() + "','" + book.getBisbn() + "','" + book.getBbookno() + "','" + book.getBfamily() + "'," + Integer.toString(book.getBquantity()) + "'";
+            int i = getStmt().executeUpdate(sqlString);
+
+            if (i == 1){
+                showalertbox("提示","图书入库成功！");
+                return;
+            }
+            else {
+                showalertbox("提示","未知错误！图书入库失败！\n请稍后重试！");
+            }
         } else {
-            com.zysns.other.AlertBox.showalertbox("警告", "数据库连接失败！");
+            showalertbox("警告", "数据库连接失败！");
         }
     }
-    public static void inventorytwo(Book book) throws SQLException {
+
+    public static Book selectbook(String no) throws SQLException {
+        if (Ret()){
+            setRs(null);
+            Book book = new Book();
+            String sqlString = "SELECT * FROM `图书` WHERE `图书编号` = '" + no + "'";
+            setRs(getStmt().executeQuery(sqlString));
+            if (getRs().next()){
+                showalertbox("提示", "查询成功！");
+                book.setBisbn(getRs().getString("ISBN"));
+                book.setBpress(getRs().getString("出版社"));
+                book.setBquantity(getRs().getInt("馆藏数量"));
+                book.setBbookno(getRs().getString("图书编号"));
+                book.setBname(getRs().getString("图书名称"));
+                book.setBfamily(getRs().getString("所属类别"));
+                book.setBbookno(getRs().getString("书架编号"));
+                book.setBauthor(getRs().getString("作者"));
+                book.setBdate(getRs().getDate("出版时间").toLocalDate());
+                return book;
+            }
+            else {
+                showalertbox("警告", "查无此书！请检查输入！");
+                return null;
+            }
+        }
+        else {
+            showalertbox("警告", "数据库连接失败！");
+            return null;
+        }
+    }
+    public static void updatebook(Book book) throws SQLException {
         //修改图书信息
-        if(getRs().next()) {
-            if (Ret()) {
-                String sqlString = "UPDATE `图书`" +
-                        "SET  `图书名称`=`" + book.getBname(getRs().getString("姓名")) + "`, `图书作者`=`" +book.getBauthor() + ", `出版社`=`" + book.getBpress()+ "`, `出版时间`=`" + book.getBdate()+ "`, " +
-                        "`ISBN`=`" +  book.getBisbn() + "`, `书架编号` =`" +  book.getBbookno()+ "`,`所属类别`=`" +  book.getBfamily() + "`,`馆藏数量=`"+book.getBquantity()  + "`" +
-                        "WHERE `图书编号` =`" +  book.getBno() + "`";
-                setRs(getStmt().executeQuery(sqlString));
-                com.zysns.other.AlertBox.showalertbox("提示","更新成功！");
-            } else {
-                com.zysns.other.AlertBox.showalertbox("警告", "数据库连接失败！");
+        if (Ret()) {
+            String sqlString = "UPDATE `图书` SET `图书名称`= '" + book.getBname() + "', `图书作者`= '" + book.getBauthor() + "', `出版社`= '" + book.getBpress() +
+                    "', `出版时间`= '" + book.getBdate() + "', `ISBN`= '" + book.getBisbn() + "', `书架编号`= '" + book.getBbookno() + "', `所属类别`= '" +
+                    book.getBfamily() + "', `馆藏数量`= " + Integer.toString(book.getBquantity()) + " WHERE `图书编号`= '" + book.getBno() + "'";
+            int i = getStmt().executeUpdate(sqlString);
+            if (i == 1){
+                showalertbox("提示","更新成功！");
+                return;
             }
+            else {
+                showalertbox("提示","更新失败！");
+                return;
+            }
+        } else {
+            showalertbox("警告", "数据库连接失败！");
         }
-            else{
-                com.zysns.other.AlertBox.showalertbox("提示","更新失败！");
-            }
     }
-    public static void inventorythree(Book book) throws SQLException {
+    public static void delete_book(String no) throws SQLException {
         //删除图书信息
-        if(getRs().next()) {
-            if (Ret()) {
-                String sqlString = "DELETE FROM `图书` WHERE `图书编号` =`" + book.getBno()+ "`";
-                setRs(getStmt().executeQuery(sqlString));
-                com.zysns.other.AlertBox.showalertbox("提示","删除成功！");
-            } else {
-                com.zysns.other.AlertBox.showalertbox("警告", "数据库连接失败！");
+        if (Ret()) {
+            String sqlString = "DELETE FROM `图书` WHERE `图书编号` = '" + no + "'";
+            int i = getStmt().executeUpdate(sqlString);
+            if (i == 1){
+                showalertbox("提示","删除成功！");
+                return;
             }
-        }
-        else{
-            com.zysns.other.AlertBox.showalertbox("提示","删除失败！");
+            else {
+                showalertbox("提示","删除失败！");
+                return;
+            }
+        } else {
+            showalertbox("警告", "数据库连接失败！");
+            return;
         }
     }
 }
