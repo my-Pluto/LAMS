@@ -79,7 +79,12 @@ public class Register extends Window implements Initializable {
     void register() throws Exception {
         Reader reader = new Reader();
         //获取输入的读者证号
-        reader.setRno(card_id.getText());
+        String ID = card_id.getText();
+        if (ID == null || ID.equals("")){
+            showalertbox("警告", "您输入的信息不全");
+            return;
+        }
+        reader.setRno(ID);
         //获取读者输入的密码，并检验是否小于6位，如小于，要求注册者重新输入
         String passward = password_text.getText();
         if (passward.length() < 6) {
@@ -96,9 +101,18 @@ public class Register extends Window implements Initializable {
         }
         reader.setRname(name);
         //获取读者的性别
-        reader.setRsex(sex.getValue());
+        String sexstring = sex.getValue();
+        if (sexstring == null || sexstring.equals("")){
+            showalertbox("警告", "您输入的信息不全");
+            return;
+        }
+        reader.setRsex(sexstring);
         //获取读者的生日，对读者输入的生日进行检验，如果存在明显错误，则要求读者重新输入
         LocalDate date = birthday_date.getValue();
+        if (date == null){
+            showalertbox("警告", "您输入的信息不全");
+            return;
+        }
         int days = Period.between(date, LocalDate.now()).getYears();
         if ((days <= 0) || days >= 100) {
             showalertbox("警告", "您输入的年龄有误\n请检查您的输入或联系管理员");
@@ -108,7 +122,12 @@ public class Register extends Window implements Initializable {
         //获取读者注册时间，即当前时间
         reader.setRcreate(LocalDate.now());
         //获取读者等级
-        reader.setRpower(reader_grade.getValue());
+        String grade = reader_grade.getValue();
+        if (grade == null || grade.equals("")){
+            showalertbox("警告", "您输入的信息不全");
+            return;
+        }
+        reader.setRpower(grade);
         //在一切检查完毕后，调用对数据库的操作，将读者的注册信息添加到数据库中
         boolean answer = registerjdbc(reader);
         //待注册完成后，如果成功，则跳转到登录页面，要求读者登录
