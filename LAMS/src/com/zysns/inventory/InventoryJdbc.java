@@ -12,7 +12,7 @@ public class InventoryJdbc extends com.zysns.main.Jdbc {
         //添加图书信息:编号，名称，作者，出版社，日期，ISBN，书架编号
         if (Ret()) {
             setRs(null);
-            String sqlString = "SELECT *FROM `书架` WHERE `书架编号` = '" + book.getBbookno() + "'";
+            String sqlString = "SELECT * FROM `书架` WHERE `书架编号` = '" + book.getBbookno() + "'";
             setRs(getStmt().executeQuery(sqlString));
             if (!getRs().next()){
                 showalertbox("警告", "您输入的书架编号不存在！\n请检查输入！");
@@ -23,9 +23,16 @@ public class InventoryJdbc extends com.zysns.main.Jdbc {
                 return;
             }
             setRs(null);
-            sqlString = "INSERT INTO `存放`(`图书号` ,`书架号` ,`入库日期` ,`入库数量` ) VALUES ('" + book.getBno() + "', '" + book.getBbookno() +
-                    "', '" + LocalDate.now() + "'," + Integer.toString(book.getBquantity()) + ")";
-            int i = getStmt().executeUpdate(sqlString);
+            int i;
+            try {
+                sqlString = "INSERT INTO `存放`(`图书号` ,`书架号` ,`入库日期` ,`入库数量` ) VALUES ('" + book.getBno() + "', '" + book.getBbookno() +
+                        "', '" + LocalDate.now() + "'," + Integer.toString(book.getBquantity()) + ")";
+                i = getStmt().executeUpdate(sqlString);
+            }
+            catch (java.sql.SQLIntegrityConstraintViolationException e){
+                showalertbox("警告", "您今天已经录入过该图书！");
+                return;
+            }
             setRs(null);
             sqlString = "SELECT * FROM `图书` WHERE `图书编号` = '" + book.getBno() + "'";
             setRs(getStmt().executeQuery(sqlString));
@@ -45,7 +52,7 @@ public class InventoryJdbc extends com.zysns.main.Jdbc {
                 sqlString = "INSERT INTO `图书`(`图书编号`,`图书名称`,`图书作者`,`出版社`,`出版时间`,`ISBN`,`书架编号`,`所属类别`,`馆藏数量` ) VALUES('" +
                         book.getBno() + "','" + book.getBname() + "','" + book.getBauthor() + "',' " + book.getBpress() + "','" +
                         book.getBdate() + "','" + book.getBisbn() + "','" + book.getBbookno() + "','" + book.getBfamily() + "'," +
-                        Integer.toString(book.getBquantity()) + "'";
+                        Integer.toString(book.getBquantity()) + ")" ;
                 int j = getStmt().executeUpdate(sqlString);
                 if (i == 1 && j ==1){
                     showalertbox("提示","图书入库成功！");

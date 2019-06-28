@@ -1,3 +1,7 @@
+/**
+ * 图书借还界面数据库操作类
+ * 主要完成在图书借还方面对数据库的操作
+ */
 package com.zysns.borrow;
 
 import com.zysns.main.Borrow_Book;
@@ -16,64 +20,87 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
     public static void borrow(String Rno, String Bno) throws Exception{
         //清空结果集
         setRs(null);
+
         if (Ret()) {
             //首先判定是否存在该用户
             String sqlString = "SELECT * FROM `读者` WHERE `读者证编号` = '" + Rno + "'";
             setRs(getStmt().executeQuery(sqlString));
+
             //如果不存在该用户，输出错误，返回
             if (!getRs().next()) {
                 showalertbox("警告", "查无此人！图书借阅失败！");
                 return;
             }
+
             setRs(null);
             //判定该用户是否存在超期图书，如果存在，输出错误，返回
             sqlString = "SELECT * FROM `借还` WHERE `读者证编号` = '" + Rno + "'";
             setRs(getStmt().executeQuery(sqlString));
+
             while (getRs().next()) {
+                //获取归还日期
                 LocalDate date1 = getRs().getDate("归还日期").toLocalDate();
+                //获取当前时间
                 LocalDate date2 = LocalDate.now();
+                //进行判断
                 if ((LocalDate.now().toEpochDay() - getRs().getDate("归还日期").toLocalDate().toEpochDay() > 0)
                         && (getRs().getString("是否归还").equals("否"))){
                     showalertbox("警告", "您有超期图书！\n借阅失败！");
                     return;
                 }
             }
+
+            //查询今天是否借阅该图书
             setRs(null);
             sqlString = "SELECT * FROM `借还` WHERE `读者证编号` = '" + Rno + "' AND `图书编号` = '" +
                     Bno + "'";
             setRs(getStmt().executeQuery(sqlString));
+            //如果已经借阅，输出错误提示
             if (getRs().next()){
                 showalertbox("警告", "该书您今天已借阅该图书！\n借阅失败！");
                 return;
             }
+
             setRs(null);
             //查询借阅的图书是否存在
             sqlString = "SELECT * FROM `图书` WHERE `图书编号` = '" + Bno + "'";
             setRs(getStmt().executeQuery(sqlString));
+            //如果不存在，输出错误提示
             if (!getRs().next()){
                 showalertbox("警告", "查无此书！\n借阅失败！");
                 return;
             }
+
             //查询借阅的图书是否存在在馆数量
             int i = getRs().getInt("馆藏数量");
+            //如果不在馆，输出错误提示
             if (i == 0){
                 showalertbox("警告", "该书已全部借出！\n借阅失败！");
                 return;
             }
             else{
-                setRs(null);
                 //如果存在在馆数量，进行借阅操作
+                setRs(null);
+
+                //将图书的在馆数量减一
                 sqlString = "UPDATE `图书` SET `馆藏数量` = `馆藏数量` - 1 WHERE `图书编号` = '" + Bno + "'";
                 int j = getStmt().executeUpdate(sqlString);
+
+                //如操作成功
                 if (j == 1) {
+                    //将借阅信息插入“借还”表中
                     sqlString = "INSERT INTO `借还`(`读者证编号` ,`图书编号` ,`借阅日期` ,`归还日期` ,`是否归还` ) VALUES('" + Rno + "','"
                             + Bno + "','" + LocalDate.now() + "','" + LocalDate.now().plusDays(30) + "','否')";
                     int k = getStmt().executeUpdate(sqlString);
+
+                    //借阅成功输出提示
                     if (k > 0){
                         showalertbox("提示", "借阅成功！");
                     }
                     else {
+                        //否则输出提示，并恢复馆藏数量
                         showalertbox("提示", "借阅失败！");
+                        sqlString = "UPDATE `图书` SET `馆藏数量` = `馆藏数量` + 1 WHERE `图书编号` = '" + Bno + "'";
                     }
                 }
                 else {

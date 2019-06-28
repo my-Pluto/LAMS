@@ -45,46 +45,60 @@ public class BorrowJh extends Window implements Initializable {
     @FXML
     private Button exit_login_button;
 
-
+    //图书管理界面跳转按钮
     @FXML
     private Button book_button;
 
+    //读者证号输入框
     @FXML
     private TextField readerID;
 
+    //还书按钮
     @FXML
     private Button huan_button;
 
+    //图书查询按钮
     @FXML
     private Button select_button;
 
+    //关于按钮
     @FXML
     private MenuItem about_button;
 
+    //借阅信息查询按钮
     @FXML
     private Button select_h_button;
 
+    //图书借阅按钮
     @FXML
     private Button borrow_book_button;
 
+    //借阅信息显示框
     @FXML
     private TableView<Borrow_Book> tableview;
 
+    //用户名标签
     @FXML
     private Label user;
 
+    //图书催还信息按钮
     @FXML
     private Button urge_book_button;
 
+    //显示框属性列
+    //图书名称
     @FXML
     private TableColumn<Borrow_Book, String> book_name;
 
+    //图书编号
     @FXML
     private TableColumn<Borrow_Book, String> book_no;
 
+    //借阅时间
     @FXML
     private TableColumn<Borrow_Book, LocalDate> borroe_date;
 
+    //最晚归还时间
     @FXML
     private TableColumn<Borrow_Book, LocalDate> still_date;
 

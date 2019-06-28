@@ -3,20 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="LAMS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/account/AccountJdbc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/borrow/Borrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/borrow/Borrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/AccountDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountDelete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/AccountG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/AccountJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountJdbc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/account/AccountReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/account/AccountReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/borrow/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/borrow/Borrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAMS/com/zysns/inventory/InventoryJdbc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAMS/com/zysns/inventory/InventoryJdbc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJJ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJdbc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJh.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJh.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryNew.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryNew.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,36 +83,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryNew.java">
+        <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJdbc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1366">
-              <caret line="186" column="9" lean-forward="true" selection-start-line="186" selection-start-column="9" selection-end-line="186" selection-end-column="9" />
+            <state relative-caret-position="143">
+              <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#4899#4900#0" expanded="true" />
-                <element signature="e#4926#4927#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryUpdate.java">
+        <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="195" column="58" selection-start-line="195" selection-start-column="58" selection-end-line="195" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java">
+        <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/Borrow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="93" column="20" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+            <state relative-caret-position="69">
+              <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,13 +163,10 @@
         <option value="$PROJECT_DIR$/src/com/zysns/login/LoginView.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/login/LoginJdbc.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/main/Borrow_Book.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJJ.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJdbc.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/inventory/Inventory.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/login/Register.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/main/Book.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/inventory/InventoryNew.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/select/Select.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/select/SelectPerson.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/other/About.java" />
@@ -195,9 +183,12 @@
         <option value="$PROJECT_DIR$/src/com/zysns/account/AccountJdbc.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJc.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJch.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/borrow/Borrow.java" />
-        <option value="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJh.java" />
         <option value="$PROJECT_DIR$/src/com/zysns/inventory/InventoryUpdate.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJh.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/borrow/Borrow.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJJ.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/borrow/BorrowJdbc.java" />
+        <option value="$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java" />
       </list>
     </option>
   </component>
@@ -249,7 +240,7 @@
               <item name="LAMS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="zysns" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="borrow" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -583,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561628172405</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="LAMS">
+      <created>1561687527603</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1561687527603</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -602,7 +600,7 @@
     <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20911528" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20911528" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -611,8 +609,8 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32913166" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3277311" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39915967" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3277311" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39915967" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32913166" />
@@ -625,17 +623,17 @@
       <window_info anchor="bottom" id="Messages" order="13" weight="0.34033614" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32913166" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.3297587" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.3297587" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="JetGradle" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3297587" />
+      <window_info anchor="right" id="Ant Build" order="10" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="11" weight="0.3297587" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -806,16 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJJ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1177">
-          <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/zysns/login/Register.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -903,13 +891,6 @@
             <element signature="e#2682#2683#0" expanded="true" />
             <element signature="e#2709#2710#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJdbc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="144" column="5" lean-forward="true" selection-start-line="120" selection-start-column="4" selection-end-line="144" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1045,43 +1026,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJch.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryUpdate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3952">
-          <caret line="210" column="8" lean-forward="true" selection-start-line="210" selection-start-column="8" selection-end-line="211" selection-end-column="52" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/Borrow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2831">
-          <caret line="149" column="15" lean-forward="true" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="15" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="437">
+          <caret line="194" column="19" selection-start-line="194" selection-start-column="19" selection-end-line="194" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1100,20 +1048,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJh.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="93" column="20" lean-forward="true" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+        <state relative-caret-position="-1529">
+          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryUpdate.java">
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="195" column="58" selection-start-line="195" selection-start-column="58" selection-end-line="195" selection-end-column="58" />
+        <state relative-caret-position="4009">
+          <caret line="213" column="52" lean-forward="true" selection-start-line="213" selection-start-column="52" selection-end-line="213" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/Borrow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJJ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-235">
+          <caret line="155" column="4" selection-start-line="155" selection-start-column="4" selection-end-line="155" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2760#2761#0" expanded="true" />
+            <element signature="e#2787#2788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/borrow/BorrowJdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/zysns/inventory/InventoryJdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
         </state>
       </provider>
     </entry>
