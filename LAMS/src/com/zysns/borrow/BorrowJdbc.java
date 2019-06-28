@@ -128,6 +128,8 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
                 showalertbox("警告" , "归还失败！请重试！");
                 return;
             }
+
+            //将库存加一
             sqlString = "UPDATE `图书` SET `馆藏数量` = `馆藏数量` + 1 WHERE `图书编号` = '" + borrow_book.getBno() + "'";
             int j = getStmt().executeUpdate(sqlString);
             if (j == 0){
@@ -154,6 +156,8 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
                 showalertbox("警告", "查无此人！信息查询失败！");
                 return;
             }
+
+            //查询操作
             setRs(null);
             sqlString = "SELECT * FROM `借还`, `图书` WHERE `读者证编号` = '" + no + "' AND `借还`.`图书编号` = `图书`.`图书编号` ORDER BY `是否归还` DESC ";
             setRs(getStmt().executeQuery(sqlString));
@@ -191,11 +195,16 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
 
     //将图书超期记录的查询结果进行处理，以便于显示在TableView中
     public static ObservableList<Borrow_Book> geturge() throws SQLException {
+        //创建用于存储结果的容器
         ObservableList<Borrow_Book> urge_books = FXCollections.observableArrayList();
+
         if (Ret()) {
+            //i用于计数操作
             double i = 0;
+
             if (getRs() != null){
                 while (getRs().next()){
+                    //循环将结果注入容器
                     if ((LocalDate.now().toEpochDay() - getRs().getDate("归还日期").toLocalDate().toEpochDay() > 0)
                              && getRs().getString("是否归还").equals("否")){
                         urge_books.add(new Borrow_Book(getRs().getString("读者证编号"), getRs().getString("图书编号"),
@@ -204,6 +213,8 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
                         i++;
                     }
                 }
+
+                //判断是否有超期图书存在
                 if (i == 0){
                     showalertbox("提示", "该用户没有超期图书存在！");
                     return null;
@@ -224,12 +235,18 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
         }
     }
 
+    //将图书借阅且未归还记录的查询结果进行处理，以便于显示在TableView中
     public static  ObservableList<Borrow_Book> getstill() throws SQLException {
+        //创建结果储存容器
         ObservableList<Borrow_Book> still_books = FXCollections.observableArrayList();
+
         if (Ret()) {
+            //i用于计数
             double i = 0;
+
             if (getRs() != null){
                 while (getRs().next()){
+                    //循环将结果注入容器
                     if (getRs().getString("是否归还").equals("否")){
                         still_books.add(new Borrow_Book(getRs().getString("读者证编号"), getRs().getString("图书编号"),
                                 getRs().getDate("借阅日期").toLocalDate(), getRs().getDate("归还日期").toLocalDate() ,
@@ -237,6 +254,8 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
                         i++;
                     }
                 }
+
+                //判断是否存在在借图书
                 if (i == 0){
                     showalertbox("提示", "该用户没有在借图书存在！");
                     return null;

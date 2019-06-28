@@ -1,10 +1,13 @@
+/**
+ * ahout界面
+ * 用于输出程序信息
+ */
+
 package com.zysns.other;
 
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -25,10 +28,13 @@ public class About {
 
         VBox vBox = new VBox(20);
         vBox.getChildren().addAll(lamsname, label1, label2, name, version);
+        //设置文字居中
         vBox.setAlignment(Pos.CENTER);
         Scene scene = new Scene(vBox);
         stage.setScene(scene);
+        //设置窗口大小不可变
         stage.setResizable(false);
+        //该窗口不关闭，其他窗口无法使用
         stage.showAndWait();
     }
 }

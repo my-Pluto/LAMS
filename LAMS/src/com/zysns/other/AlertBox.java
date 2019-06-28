@@ -26,14 +26,17 @@ public class AlertBox {
         Label label = new Label(message);
 
         Button button = new Button("确定");
+        //点击确认关闭窗口
         button.setOnAction(e -> window.close());
+        //回车关闭窗口
         button.setOnKeyReleased(e -> {
             if (e.getCode() == KeyCode.ENTER)
                 window.close();
         });
+
         VBox layout = new VBox(10);
         layout.getChildren().addAll(label, button);
-        layout.setAlignment(Pos.CENTER);
+        //设置窗口居中
         layout.setAlignment(Pos.CENTER);
         Scene scene = new Scene(layout);
         window.setScene(scene);

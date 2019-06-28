@@ -200,6 +200,7 @@ public class BorrowJc extends Window implements Initializable {
         }
         else {
             String id = readerID.getText();
+            //判断是否为空
             if (id == null || id.equals("")){
                 showalertbox("警告", "您输入的信息不全！请检查后重试！");
                 return;

@@ -1,6 +1,9 @@
+/**
+ * 注册界面控制类
+ * 进行读者账号的注册
+ */
 package com.zysns.login;
 
-import com.zysns.main.Book;
 import com.zysns.main.Reader;
 import com.zysns.main.Window;
 import javafx.fxml.FXML;
@@ -16,7 +19,6 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Date;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ResourceBundle;
@@ -78,58 +80,54 @@ public class Register extends Window implements Initializable {
     @FXML
     void register() throws Exception {
         Reader reader = new Reader();
-        //获取输入的读者证号
+
+        //获取输入的读者证号、姓名、性别、
         String ID = card_id.getText();
-        if (ID == null || ID.equals("")){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
-        reader.setRno(ID);
-        //获取读者输入的密码，并检验是否小于6位，如小于，要求注册者重新输入
+        String name = name_text.getText();
+        String sexstring = sex.getValue();
+        String grade = reader_grade.getValue();
+        LocalDate date = birthday_date.getValue();
         String passward = password_text.getText();
+
+        //检验输入的密码是否小于6位，如小于，要求注册者重新输入
         if (passward.length() < 6) {
             showalertbox("警告", "输入的密码小于6位\n请重新输入");
             return;
         }
-        //对读者设置的密码进行加密，保证在服务器端不会存储用户的明文密码，已保证安全，采用SHA加密的方法
-        reader.setRpassword(getResult(passward));
+
         //获取读者输入的姓名，并对读者输入的姓名进行检验，如果存在明显错误，则要求注册者重新输入
-        String name = name_text.getText();
+
         if ((name.length() < 2) || (name.length() > 6)) {
             showalertbox("警告", "您输入的姓名过长或过短\n请检查您的输入或联系管理员");
             return;
         }
-        reader.setRname(name);
-        //获取读者的性别
-        String sexstring = sex.getValue();
-        if (sexstring == null || sexstring.equals("")){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
-        reader.setRsex(sexstring);
-        //获取读者的生日，对读者输入的生日进行检验，如果存在明显错误，则要求读者重新输入
-        LocalDate date = birthday_date.getValue();
-        if (date == null){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
+        //对读者输入的生日进行检验，如果存在明显错误，则要求读者重新输入
         int days = Period.between(date, LocalDate.now()).getYears();
         if ((days <= 0) || days >= 100) {
             showalertbox("警告", "您输入的年龄有误\n请检查您的输入或联系管理员");
             return;
         }
-        reader.setRbrithday(date);
-        //获取读者注册时间，即当前时间
-        reader.setRcreate(LocalDate.now());
-        //获取读者等级
-        String grade = reader_grade.getValue();
-        if (grade == null || grade.equals("")){
+        //对输入信息是否为空进行检验
+        if((grade == null || grade.equals("")) || (ID == null || ID.equals("")) || (date == null) ||
+                (sexstring == null || sexstring.equals(""))){
             showalertbox("警告", "您输入的信息不全");
             return;
         }
+
+        reader.setRno(ID);
+        reader.setRname(name);
         reader.setRpower(grade);
+        reader.setRage(sexstring);
+        reader.setRbrithday(date);
+        reader.setRsex(sexstring);
+        //获取读者注册时间，即当前时间
+        reader.setRcreate(LocalDate.now());
+        //对读者设置的密码进行加密，保证在服务器端不会存储用户的明文密码，已保证安全，采用SHA加密的方法
+        reader.setRpassword(getResult(passward));
+
         //在一切检查完毕后，调用对数据库的操作，将读者的注册信息添加到数据库中
         boolean answer = registerjdbc(reader);
+
         //待注册完成后，如果成功，则跳转到登录页面，要求读者登录
         if (answer)
             back();

@@ -27,9 +27,10 @@ public class AccountJdbc extends com.zysns.main.Jdbc{
             //如果不存在
             if (!getRs().next()) {
                 //进行账号注册
-                String sqlString = "INSERT INTO `读者`(`读者证编号`,`密码`,`姓名`,`性别`,`出生日期`,`创建日期`,`借阅权限`)" +
+                String sqlString = "INSERT INTO `读者`(`读者证编号`,`密码`,`姓名`,`性别`,`出生日期`,`创建日期`,`借阅权限`, `年龄`)" +
                         "VALUES('" + reader.getRno() + "', '" + reader.getRpassword() + "', '" + reader.getRname() +
-                        "', '" + reader.getRsex() + "', '" + reader.getRbrithday() + "', '" + reader.getRcreate() + "', '" + reader.getRpower() + "')";
+                        "', '" + reader.getRsex() + "', '" + reader.getRbrithday() + "', '" + reader.getRcreate()
+                        + "', '" + reader.getRpower() + "','" + reader.getRage() + "')";
                 int i = getStmt().executeUpdate(sqlString);
                 //update返回值为受影响的行数
                 //进行注册结果检验
@@ -66,9 +67,10 @@ public class AccountJdbc extends com.zysns.main.Jdbc{
 
             //如果该工号不存在，进行创建工作
             if (!getRs().next()){
-                sqlString = "INSERT INTO `管理员`(`工号`,`密码`,`管理员等级`,`性别`,`所属部门`,`所属领导`,`姓名`, `出生日期` )" +
+                sqlString = "INSERT INTO `管理员`(`工号`,`密码`,`管理员等级`,`性别`,`所属部门`,`所属领导`,`姓名`, `出生日期`, `年龄` )" +
                " VALUES('" + manager.getMno() + "','" + manager.getMpassword() + "','" + manager.getMlevel() + "','" +
-                        manager.getMsex() + "','" + manager.getMdept()+"','" + manager.getMlead() + "','" + manager.getMname() + "','" + manager.getMdirthday() + "')";
+                        manager.getMsex() + "','" + manager.getMdept()+"','" + manager.getMlead() + "','" + manager.getMname() + "','"
+                        + manager.getMdirthday() + "','" + manager.getMage() + "')";
                 int i = getStmt().executeUpdate(sqlString);
                 //对创建结果进行检验
                 if (i == 1)

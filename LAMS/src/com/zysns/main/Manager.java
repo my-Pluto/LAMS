@@ -16,13 +16,14 @@ public class Manager {
     private String mdept;    //管理员所属部门
     private String mlead;    //管理员领导
     private String mlevel;    //管理员等级
+    private String mage;    //年龄
 
     //无参构造
     public Manager() {
     }
 
     //有参构造
-    public Manager(String mno, String mname, String mpassword, String msex, LocalDate mdirthday, String mdept, String mlead, String mlevel) {
+    public Manager(String mno, String mname, String mpassword, String msex, LocalDate mdirthday, String mdept, String mlead, String mlevel, String mage) {
         this.mno = mno;
         this.mname = mname;
         this.mpassword = mpassword;
@@ -31,6 +32,15 @@ public class Manager {
         this.mdept = mdept;
         this.mlead = mlead;
         this.mlevel = mlevel;
+        this.mage = mage;
+    }
+
+    public String getMage() {
+        return mage;
+    }
+
+    public void setMage(String mage) {
+        this.mage = mage;
     }
 
     public String getMno() {

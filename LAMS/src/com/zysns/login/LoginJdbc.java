@@ -54,9 +54,10 @@ public class LoginJdbc extends com.zysns.main.Jdbc {
             if (!getRs().next()) {
 
                 //进行账号注册
-                String sqlString = "INSERT INTO `读者`(`读者证编号`,`密码`,`姓名`,`性别`,`出生日期`,`创建日期`,`借阅权限`)" +
+                String sqlString = "INSERT INTO `读者`(`读者证编号`,`密码`,`姓名`,`性别`,`出生日期`,`创建日期`,`借阅权限`, `年龄`)" +
                         "VALUES('" + reader.getRno() + "', '" + reader.getRpassword() + "', '" + reader.getRname() +
-                        "', '" + reader.getRsex() + "', '" + reader.getRbrithday() + "', '" + reader.getRcreate() + "', '" + reader.getRpower() + "')";
+                        "', '" + reader.getRsex() + "', '" + reader.getRbrithday() + "', '" + reader.getRcreate() + "', '"
+                        + reader.getRpower() + "', '" + reader.getRage() +"')";
                 int i = getStmt().executeUpdate(sqlString);
 
                 //update返回值为受影响的行数

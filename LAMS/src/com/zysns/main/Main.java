@@ -1,3 +1,7 @@
+/**
+ * 主函数
+ */
+
 package com.zysns.main;
 
 import javafx.fxml.FXMLLoader;

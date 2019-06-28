@@ -5,7 +5,6 @@
 package com.zysns.main;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Reader {
     private String rno;    //读者编号
@@ -15,13 +14,14 @@ public class Reader {
     private LocalDate rbrithday;    //读者出生日期
     private LocalDate rcreate;    //读者证创建日期
     private String rpower;    //借阅权限，主要分为成人读者1、儿童读者0等
+    private String rage; //读者年龄
 
     //无参构造
     public Reader() {
     }
 
     //有参构造
-    public Reader(String rno, String rpassword, String rname, String rsex, LocalDate rbrithday, LocalDate rcreate, String rpower) {
+    public Reader(String rno, String rpassword, String rname, String rsex, LocalDate rbrithday, LocalDate rcreate, String rpower, String rage) {
         this.rno = rno;
         this.rpassword = rpassword;
         this.rname = rname;
@@ -29,9 +29,18 @@ public class Reader {
         this.rbrithday = rbrithday;
         this.rcreate = rcreate;
         this.rpower = rpower;
+        this.rage = rage;
     }
 
     //getter、setter
+    public String getRage() {
+        return rage;
+    }
+
+    public void setRage(String rage) {
+        this.rage = rage;
+    }
+
     public String getRno() {
         return rno;
     }

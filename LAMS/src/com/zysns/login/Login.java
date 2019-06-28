@@ -1,3 +1,7 @@
+/**
+ * 登录界面控制类
+ * 进行登录以及注册界面跳转
+ */
 package com.zysns.login;
 
 import javafx.fxml.FXML;
@@ -73,8 +77,10 @@ public class Login extends Window implements Initializable {
             showalertbox("警告", "登录失败！请检查您输入的账号或密码！");
             return;
         }
+
         //进行登录操作，和数据库中保存的账号、密码进行比对，确认是否登录成功
         boolean answer = Login(user,password,family);
+
         //如果登录成功，则跳转的登录后的主界面
         if (answer) {
             //设置当前登录用户的信息
@@ -84,6 +90,7 @@ public class Login extends Window implements Initializable {
             else{
                 setW_reader(return_reader(user));
             }
+
             //界面跳转
             Parent view = FXMLLoader.load(getClass().getResource("../login/LoginView.fxml"));
             getWindow().setScene(new Scene(view, 1280, 800));
