@@ -1,3 +1,7 @@
+/**
+ * 图书借还系统主界面控制类
+ * 主要用于各个界面之间的跳转
+ */
 package com.zysns.borrow;
 
 import com.zysns.main.Window;
@@ -67,6 +71,7 @@ public class Borrow extends Window implements Initializable {
     //跳转到图书管理界面
     @FXML
     void book() throws IOException {
+        //鉴权
         if (getW_manager() == null){
             showalertbox("警告", "对不起，您的账号没有权限使用该功能");
             return;
@@ -85,6 +90,7 @@ public class Borrow extends Window implements Initializable {
     //跳转到账号管理界面
     @FXML
     void account() throws IOException {
+        //鉴权
         if (getW_manager() == null){
             showalertbox("警告", "对不起，您的账号没有权限使用该功能");
             return;
@@ -116,10 +122,9 @@ public class Borrow extends Window implements Initializable {
         }
     }
 
+    //关于界面
     @FXML
-    void about() {
-        showabout();
-    }
+    void about() { showabout(); }
 
     //跳转到图书催还界面
     @FXML
@@ -142,7 +147,7 @@ public class Borrow extends Window implements Initializable {
         getWindow().setScene(new Scene(still, 1280, 800));
     }
 
-    //跳转到个人信息界面
+    //跳转到借阅信息界面
     @FXML
     void message() throws IOException {
         Parent message = FXMLLoader.load(getClass().getResource("../borrow/BorrowJc.fxml"));
@@ -152,6 +157,7 @@ public class Borrow extends Window implements Initializable {
     //界面初始化
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //初始化用户名标签
         if (getW_manager() != null){
             user.setText(getW_manager().getMname());
         }

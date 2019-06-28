@@ -68,6 +68,7 @@ public class InventoryJdbc extends com.zysns.main.Jdbc {
             setRs(getStmt().executeQuery(sqlString));
             if (getRs().next()){
                 showalertbox("提示", "查询成功！");
+                book.setBno(getRs().getString("图书编号"));
                 book.setBisbn(getRs().getString("ISBN"));
                 book.setBpress(getRs().getString("出版社"));
                 book.setBquantity(getRs().getInt("馆藏数量"));
@@ -75,7 +76,7 @@ public class InventoryJdbc extends com.zysns.main.Jdbc {
                 book.setBname(getRs().getString("图书名称"));
                 book.setBfamily(getRs().getString("所属类别"));
                 book.setBbookno(getRs().getString("书架编号"));
-                book.setBauthor(getRs().getString("作者"));
+                book.setBauthor(getRs().getString("图书作者"));
                 book.setBdate(getRs().getDate("出版时间").toLocalDate());
                 return book;
             }

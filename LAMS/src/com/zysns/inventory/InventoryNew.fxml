@@ -125,7 +125,7 @@
                                     <Insets left="25.0" />
                                  </GridPane.margin>
                               </Label>
-                              <TextField fx:id="book_no" editable="false" prefHeight="37.0" promptText="请输入八位图书编号" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="book_no" prefHeight="37.0" promptText="请输入八位图书编号" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                               <Label prefHeight="37.0" prefWidth="92.0" text="图书名称" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="STKaiti" size="20.0" />

@@ -1,3 +1,7 @@
+/**
+ * 账号管理主界面控制类
+ * 主要用于各个界面的跳转
+ */
 package com.zysns.account;
 
 import com.zysns.main.Window;
@@ -15,6 +19,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static com.zysns.other.About.showabout;
+import static com.zysns.other.AlertBox.showalertbox;
 import static com.zysns.other.ExitBox.showexitbox;
 
 public class Account extends Window implements Initializable {
@@ -76,6 +81,11 @@ public class Account extends Window implements Initializable {
     @FXML
         //显示图书管理界面
     void book() throws IOException {
+        //鉴权
+        if (getW_manager() == null){
+            showalertbox("警告", "对不起，您的账号没有权限使用该功能");
+            return;
+        }
         Parent book = FXMLLoader.load(getClass().getResource("../inventory/Inventory.fxml"));
         getWindow().setScene(new Scene(book, 1280, 800));
     }

@@ -1,3 +1,9 @@
+/**
+ * 账号删除控制类
+ * 主要用于账号删除界面各个构件的初始化
+ * 以及各个响应事件的编写
+ */
+
 package com.zysns.account;
 
 import com.zysns.main.Window;
@@ -88,6 +94,7 @@ public class AccountDelete extends Window implements Initializable {
     @FXML
         //显示图书管理界面
     void book() throws IOException {
+        //鉴权
         if (getW_manager() == null){
             showalertbox("警告", "对不起，您的账号没有权限使用该功能");
             return;
@@ -113,16 +120,21 @@ public class AccountDelete extends Window implements Initializable {
     //进行账号删除操作
     @FXML
     void delete() throws Exception {
+        //对选择的删除类型进行判断，如果为空则退出
         String family = account_family_combobox.getValue();
         if (family == null || family.equals("")){
             showalertbox("警告", "请选择需要删除的账号类型！");
             return;
         }
+
+        //对输入的ID进行判断，如果为空则进行判断
         String no = Id_text.getText();
         if (no == null || no.equals("")){
             showalertbox("警告", "请输入需要删除的账号！");
             return;
         }
+
+        //调用对数据库的操作，进行账号删除
         delete_account(no, family, getW_manager().getMno());
     }
     @FXML
@@ -140,12 +152,14 @@ public class AccountDelete extends Window implements Initializable {
         showabout();
     }
 
+    //跳转到读者证号创建界面
     @FXML
     void readerID_create() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../account/AccountReader.fxml"));
         getWindow().setScene(new Scene(root, 1280, 800));
     }
 
+    //跳转到管理员账号创建界面
     @FXML
     void message_create() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../account/AccountG.fxml"));
@@ -154,6 +168,7 @@ public class AccountDelete extends Window implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //初始化类型下拉菜单
         account_family_combobox.getItems().addAll("管理员", "普通用户");
         //界面初始化，此处主要用于初始化用户名位置信息
         if (getW_manager() != null){

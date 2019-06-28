@@ -1,3 +1,8 @@
+/**
+ * 读者账号创建界面控制类
+ * 主要用于各个界面之间的跳转
+ * 以及各个事件的响应
+ */
 package com.zysns.account;
 
 import com.zysns.main.Reader;
@@ -21,9 +26,9 @@ import java.time.Period;
 import java.util.ResourceBundle;
 
 import static com.zysns.account.AccountJdbc.reader_create;
-import static com.zysns.login.LoginJdbc.registerjdbc;
 import static com.zysns.other.About.showabout;
 import static com.zysns.other.AlertBox.showalertbox;
+import static com.zysns.other.ExitBox.showexitbox;
 import static com.zysns.other.SHA.getResult;
 
 public class AccountReader extends Window implements Initializable {
@@ -113,6 +118,10 @@ public class AccountReader extends Window implements Initializable {
     @FXML
         //显示图书管理界面
     void book() throws IOException {
+        if (getW_manager() == null){
+            showalertbox("警告", "对不起，您的账号没有权限使用该功能");
+            return;
+        }
         Parent book = FXMLLoader.load(getClass().getResource("../inventory/Inventory.fxml"));
         getWindow().setScene(new Scene(book, 1280, 800));
     }
@@ -120,98 +129,98 @@ public class AccountReader extends Window implements Initializable {
     @FXML
         //点击退出后返回登录界面
     void exit_login() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../login/Login.fxml"));
-        getWindow().setScene(new Scene(root, 1280, 800));
+        boolean answer = showexitbox("提示", "您是否真的要退出当前登录的账号？");
+        if (answer){
+            //将当前用户信息清除
+            setW_manager(null);
+            setW_reader(null);
+            //跳转到登录界面
+            Parent root = FXMLLoader.load(getClass().getResource("../login/Login.fxml"));
+            getWindow().setScene(new Scene(root, 1280, 800));
+        }
     }
 
     @FXML
         //点击exit后退出系统
     void exit() {
-        System.exit(0);
+        boolean answer = showexitbox("提示", "您是否真的要关闭当前系统？");
+        if(answer) {
+            System.exit(0);
+        }
     }
 
     @FXML
         //显示About信息
-    void about() {
-        showabout();
-    }
+    void about() { showabout(); }
 
+    //跳转的管理员账号创建界面
     @FXML
     void message_create() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../account/AccountG.fxml"));
         getWindow().setScene(new Scene(root, 1280, 800));
     }
 
+    //跳转的账号删除界面
     @FXML
     void account_delete() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../account/AccountDelete.fxml"));
         getWindow().setScene(new Scene(root, 1280, 800));
     }
 
+    //读者账号创建事件响应
     @FXML
     void create_reader() throws Exception {
         Reader reader = new Reader();
-        //获取输入的读者证号
+
+        //获取输入的读者证号、年龄、姓名、性别、读者等级、生日、密码等
         String ID = ID_text.getText();
-        if (ID == null || ID.equals("")){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
-        reader.setRno(ID);
-        //获取读者输入的密码，并检验是否小于6位，如小于，要求注册者重新输入
+        String age = age_text.getText();
+        String name = name_button.getText();
+        String sex = sex_combobox.getValue();
+        String grade = grade_combobox.getValue();
+        LocalDate date = birthday_date.getValue();
         String passward = password_text.getText();
+
+        //检验输入的密码是否小于6位，如小于，要求注册者重新输入
         if (passward.length() < 6) {
             showalertbox("警告", "输入的密码小于6位\n请重新输入");
             return;
         }
-        //对读者设置的密码进行加密，保证在服务器端不会存储用户的明文密码，已保证安全，采用SHA加密的方法
-        reader.setRpassword(getResult(passward));
-        //获取读者输入的姓名，并对读者输入的姓名进行检验，如果存在明显错误，则要求注册者重新输入
-        String name = name_button.getText();
+        //对读者输入的姓名进行检验，如果存在明显错误，则要求注册者重新输入
         if ((name.length() < 2) || (name.length() > 6)) {
             showalertbox("警告", "您输入的姓名过长或过短\n请检查您的输入或联系管理员");
             return;
         }
-        reader.setRname(name);
-        //获取读者的性别
-        String sex = sex_combobox.getValue();
-        if (sex == null || sex.equals("")){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
-        reader.setRsex(sex);
         //获取读者的生日，对读者输入的生日进行检验，如果存在明显错误，则要求读者重新输入
-        LocalDate date = birthday_date.getValue();
-        if (date == null){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
-
-        String age = age_text.getText();
-        if (age == null ||age.equals("")){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
         int years = Period.between(date, LocalDate.now()).getYears();
         if ((years <= 0) || years >= 100 || years != Integer.parseInt(age_text.getText())) {
             showalertbox("警告", "您输入的年龄或生日有误\n请检查您的输入或联系管理员");
             return;
         }
-        reader.setRbrithday(date);
-        //获取读者注册时间，即当前时间
-        reader.setRcreate(LocalDate.now());
-        //获取读者等级
-        String grade = grade_combobox.getValue();
-        if (grade == null || grade.equals("")){
+        //对输入的各个值检验是否为空
+        if ((grade == null || grade.equals("")) || (ID == null || ID.equals("")) || (date == null) ||
+                (age == null ||age.equals("")) || (sex == null || sex.equals(""))){
             showalertbox("警告", "您输入的信息不全");
             return;
         }
+
+        //设置各个值
+        reader.setRno(ID);
+        reader.setRsex(sex);
+        reader.setRname(name);
         reader.setRpower(grade);
+        reader.setRbrithday(date);
+        //获取读者注册时间，即当前时间
+        reader.setRcreate(LocalDate.now());
+        //对读者设置的密码进行加密，保证在服务器端不会存储用户的明文密码，已保证安全，采用SHA加密的方法
+        reader.setRpassword(getResult(passward));
         //在一切检查完毕后，调用对数据库的操作，将读者的注册信息添加到数据库中
         reader_create(reader);
     }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //初始化各个下拉框菜单
         sex_combobox.getItems().addAll("男", "女");
         grade_combobox.getItems().addAll("儿童读者", "成人读者");
         //界面初始化，此处主要用于初始化用户名位置信息

@@ -1,3 +1,8 @@
+/**
+ * 管理员账号创建控制类
+ * 主要用于管理员账号创建界面的页面跳转
+ * 以及各个事件的响应
+ */
 package com.zysns.account;
 
 import com.zysns.main.Manager;
@@ -150,82 +155,73 @@ public class AccountG extends Window implements Initializable {
         showabout();
     }
 
+    //跳转到读者证号创建界面
     @FXML
     void readerID_create() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../account/AccountReader.fxml"));
         getWindow().setScene(new Scene(root, 1280, 800));
     }
 
+    //跳转到账号删除界面
     @FXML
     void account_delete() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../account/AccountDelete.fxml"));
         getWindow().setScene(new Scene(root, 1280, 800));
     }
 
+    //创建管理员账号事件响应
     @FXML
     void create() throws Exception {
         Manager manager = new Manager();
-        //获取输入的工号
+        //获取输入的工号、姓名、部门、性别、密码、生日、管理员等级
         String ID = ID_texxt.getText();
-        if (ID == null || ID.equals("")){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
-        manager.setMno(ID);
-        //获取输入的密码，并检验是否小于6位，如小于，要求注册者重新输入
+        String name = name_text.getText();
+        String dept = dept_text.getText();
+        String sex = sex_combobox.getValue();
         String passward = password_text.getText();
+        LocalDate date = birthday_date.getValue();
+        String grade = message_grade_combobox.getValue();
+
+        //检验输入的密码是否小于6位，如小于，要求注册者重新输入
         if (passward.length() < 6) {
             showalertbox("警告", "输入的密码小于6位\n请重新输入");
             return;
         }
-        //对设置的密码进行加密，保证在服务器端不会存储用户的明文密码，已保证安全，采用SHA加密的方法
-        manager.setMpassword(getResult(passward));
-        //获取输入的姓名，并对输入的姓名进行检验，如果存在明显错误，则要求注册者重新输入
-        String name = name_text.getText();
+        //对输入的姓名进行检验，如果存在明显错误，则要求注册者重新输入
         if ((name.length() < 2) || (name.length() > 6)) {
             showalertbox("警告", "您输入的姓名过长或过短\n请检查您的输入或联系管理员");
             return;
         }
-        manager.setMname(name);
-        //获取性别
-        String sex = sex_combobox.getValue();
-        if (sex == null || sex.equals("")){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
-        manager.setMsex(sex);
-        //获取生日，对输入的生日进行检验，如果存在明显错误，则要求重新输入
-        LocalDate date = birthday_date.getValue();
-        if (date == null){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
+        //对输入的生日进行检验，如果存在明显错误，则要求重新输入
         int days = Period.between(date, LocalDate.now()).getYears();
         if ((days <= 17) || days >= 66) {
             showalertbox("警告", "您输入的出生日期有误\n请检查您的输入");
             return;
         }
-        manager.setMdirthday(date);
-        //获取管理员等级
-        String grade = message_grade_combobox.getValue();
-        if (grade == null || grade.equals("")){
-            showalertbox("警告", "您输入的信息不全");
-            return;
-        }
+        //对管理员权限进行检验
         if (Integer.parseInt(message_grade_combobox.getValue()) <= Integer.parseInt(getW_manager().getMlevel())){
             showalertbox("警告", "对不起，您创建的账号高于您的权限，创建失败！");
             return;
         }
-        manager.setMlevel(message_grade_combobox.getValue());
-        //设置管理员所在部门
-        String dept = dept_text.getText();
-        if (dept == null || dept.equals("")){
+        //对各个输入是否为空进行检验
+        if ((dept == null || dept.equals("")) || (ID == null || ID.equals("")) || (sex == null || sex.equals("")) || (date == null) ||
+                (grade == null || grade.equals(""))){
             showalertbox("警告", "您输入的信息不全");
             return;
         }
+
+        //设置各个值
+        manager.setMno(ID);
+        manager.setMsex(sex);
+        manager.setMname(name);
+        manager.setMdirthday(date);
         manager.setMdept(dept_text.getText());
+        manager.setMlevel(message_grade_combobox.getValue());
+        //对设置的密码进行加密，保证在服务器端不会存储用户的明文密码，已保证安全，采用SHA加密的方法
+        manager.setMpassword(getResult(passward));
         //获取管理员所属领导（即创建该账号的账号）
         manager.setMlead(getW_manager().getMno());
+
         //在一切检查完毕后，调用对数据库的操作，将读者的注册信息添加到数据库中
         manager_create(manager);
     }
@@ -239,6 +235,7 @@ public class AccountG extends Window implements Initializable {
         else {
             user.setText(getW_reader().getRname());
         }
+        //初始化各个下拉框
         sex_combobox.getItems().addAll("男", "女");
         message_grade_combobox.getItems().addAll("1", "2", "3", "4", "5");
     }
