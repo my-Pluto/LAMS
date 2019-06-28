@@ -114,6 +114,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
                               <Label text="工    号" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -148,7 +149,7 @@
                                     <Insets left="18.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label prefHeight="37.0" text="等    级" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <Label prefHeight="37.0" text="年    龄" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -159,7 +160,7 @@
                               <TextField fx:id="ID_texxt" prefHeight="37.0" prefWidth="253.0" promptText="请输入工号" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                               <TextField fx:id="name_text" prefHeight="37.0" promptText="请输入姓名" GridPane.columnIndex="5" GridPane.rowIndex="1" />
                               <TextField fx:id="password_text" prefHeight="37.0" promptText="请输入设置密码" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                              <ComboBox fx:id="message_grade_combobox" prefHeight="37.0" prefWidth="223.0" promptText="请选择管理员等级" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <ComboBox fx:id="message_grade_combobox" prefHeight="37.0" prefWidth="223.0" promptText="请选择管理员等级" GridPane.columnIndex="2" GridPane.rowIndex="9" />
                               <DatePicker fx:id="birthday_date" prefHeight="37.0" prefWidth="254.0" promptText="请选择出生日期" GridPane.columnIndex="5" GridPane.rowIndex="5" />
                               <Label text="出生日期" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                  <font>
@@ -187,6 +188,15 @@
                               </Label>
                               <TextField fx:id="leader_text" disable="true" editable="false" prefHeight="37.0" prefWidth="253.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
                               <TextField fx:id="dept_text" prefHeight="37.0" prefWidth="253.0" promptText="请输入所属部门" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <Label prefHeight="37.0" text="等    级" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="18.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="age_text" prefHeight="37.0" promptText="请输入年龄" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                            </children>
                         </GridPane>
                         <Button fx:id="create_button" layoutX="499.0" layoutY="550.0" mnemonicParsing="false" onAction="#create" prefHeight="61.0" prefWidth="119.0" text="创建">
