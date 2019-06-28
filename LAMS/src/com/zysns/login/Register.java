@@ -83,6 +83,7 @@ public class Register extends Window implements Initializable {
 
         //获取输入的读者证号、姓名、性别、
         String ID = card_id.getText();
+        String age = age_text.getText();
         String name = name_text.getText();
         String sexstring = sex.getValue();
         String grade = reader_grade.getValue();
@@ -101,20 +102,33 @@ public class Register extends Window implements Initializable {
             showalertbox("警告", "您输入的姓名过长或过短\n请检查您的输入或联系管理员");
             return;
         }
+        //对输入的年龄进行校验
+        try{
+            if (Integer.parseInt(age) <= 0 || Integer.parseInt(age) >= 100){
+                showalertbox("警告", "您输入的年龄有误，请检查输入！");
+                return;
+            }
+        }
+        catch (Exception e){
+            showalertbox("警告", "请输入正确的年龄！");
+            return;
+        }
         //对读者输入的生日进行检验，如果存在明显错误，则要求读者重新输入
-        int days = Period.between(date, LocalDate.now()).getYears();
-        if ((days <= 0) || days >= 100) {
-            showalertbox("警告", "您输入的年龄有误\n请检查您的输入或联系管理员");
+        int years = Period.between(date, LocalDate.now()).getYears();
+        if ((years <= 0) || years >= 100 || years != Integer.parseInt(age_text.getText())) {
+            showalertbox("警告", "您输入的出生日期有误或与年龄不符\n请检查您的输入或联系管理员");
             return;
         }
         //对输入信息是否为空进行检验
         if((grade == null || grade.equals("")) || (ID == null || ID.equals("")) || (date == null) ||
-                (sexstring == null || sexstring.equals(""))){
+                (sexstring == null || sexstring.equals("")) || ((age == null) || age.equals(""))) {
             showalertbox("警告", "您输入的信息不全");
             return;
         }
 
+        //设置各个值
         reader.setRno(ID);
+        reader.setRage(age);
         reader.setRname(name);
         reader.setRpower(grade);
         reader.setRage(sexstring);

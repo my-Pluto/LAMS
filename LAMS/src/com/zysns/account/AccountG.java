@@ -105,6 +105,10 @@ public class AccountG extends Window implements Initializable {
     @FXML
     private Button borroe_button;
 
+    //年龄输入框
+    @FXML
+    private TextField age_text;
+
     @FXML
         //显示图书借还界面
     void borrow() throws IOException {
@@ -173,8 +177,9 @@ public class AccountG extends Window implements Initializable {
     @FXML
     void create() throws Exception {
         Manager manager = new Manager();
-        //获取输入的工号、姓名、部门、性别、密码、生日、管理员等级
+        //获取输入的工号、年龄、姓名、部门、性别、密码、生日、管理员等级
         String ID = ID_texxt.getText();
+        String age = age_text.getText();
         String name = name_text.getText();
         String dept = dept_text.getText();
         String sex = sex_combobox.getValue();
@@ -192,9 +197,20 @@ public class AccountG extends Window implements Initializable {
             showalertbox("警告", "您输入的姓名过长或过短\n请检查您的输入或联系管理员");
             return;
         }
+        //对输入的年龄进行校验
+        try{
+            if (Integer.parseInt(age) <= 17 || Integer.parseInt(age) >= 66){
+                showalertbox("警告", "您输入的年龄有误，请检查输入！");
+                return;
+            }
+        }
+        catch (Exception e){
+            showalertbox("警告", "请输入正确的年龄！");
+            return;
+        }
         //对输入的生日进行检验，如果存在明显错误，则要求重新输入
-        int days = Period.between(date, LocalDate.now()).getYears();
-        if ((days <= 17) || days >= 66) {
+        int years = Period.between(date, LocalDate.now()).getYears();
+        if ((years <= 17) || years >= 66 || years != Integer.parseInt(age_text.getText())) {
             showalertbox("警告", "您输入的出生日期有误\n请检查您的输入");
             return;
         }
@@ -203,9 +219,10 @@ public class AccountG extends Window implements Initializable {
             showalertbox("警告", "对不起，您创建的账号高于您的权限，创建失败！");
             return;
         }
+
         //对各个输入是否为空进行检验
         if ((dept == null || dept.equals("")) || (ID == null || ID.equals("")) || (sex == null || sex.equals("")) || (date == null) ||
-                (grade == null || grade.equals(""))){
+                (grade == null || grade.equals("")) || (age == null || age.equals(""))){
             showalertbox("警告", "您输入的信息不全");
             return;
         }

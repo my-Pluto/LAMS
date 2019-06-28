@@ -191,6 +191,17 @@ public class AccountReader extends Window implements Initializable {
             showalertbox("警告", "您输入的姓名过长或过短\n请检查您的输入或联系管理员");
             return;
         }
+        //对输入的年龄进行校验
+        try{
+            if (Integer.parseInt(age) <= 0 || Integer.parseInt(age) >= 100){
+                showalertbox("警告", "您输入的年龄有误，请检查输入！");
+                return;
+            }
+        }
+        catch (Exception e){
+            showalertbox("警告", "请输入正确的年龄！");
+            return;
+        }
         //获取读者的生日，对读者输入的生日进行检验，如果存在明显错误，则要求读者重新输入
         int years = Period.between(date, LocalDate.now()).getYears();
         if ((years <= 0) || years >= 100 || years != Integer.parseInt(age_text.getText())) {
