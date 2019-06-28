@@ -97,11 +97,13 @@ public class AccountJdbc extends com.zysns.main.Jdbc{
             if (family.equals("管理员")) {
                 //进行管理员账号删除操作
                 //首先检查是否存在该账号
-                String sqlString = new String();
+                String sqlString;
                 sqlString = "SELECT * FROM `管理员` WHERE `工号` = '" + no + "'";
                 setRs(getStmt().executeQuery(sqlString));
 
-                if (getRs().next()){
+                if (!getRs().next()) {
+                    showalertbox("提示", "查无此人，请检查您输入的工号！");
+                } else {
                     //存在该账号，进行删除权限检查
                     String lead = getRs().getString("所属领导");
                     if (!lead.equals(leader)){
@@ -124,14 +126,12 @@ public class AccountJdbc extends com.zysns.main.Jdbc{
                             showalertbox("提示","删除失败！请重试！");
                     }
                 }
-                else
-                    showalertbox("提示", "查无此人，请检查您输入的工号！");
 
             } else {
                 //进行读者账号删除操作
                 //首先判断是否存在该账号
                 setRs(null);
-                String sqlString = new String();
+                String sqlString;
                 sqlString = "SELECT * FROM `读者` WHERE `读者证编号` = '" + no + "'";
                 setRs(getStmt().executeQuery(sqlString));
 
