@@ -111,11 +111,19 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
             showalertbox("警告", "数据库连接失败！请稍后重试！");
         }
     }
+
+    //进行图书归还操作
     public static void book_still(Borrow_Book borrow_book) throws Exception {
         if (Ret()) {
+            //结果集清空
+            setRs(null);
+
+            //进行图书归还操作
             String sqlString = "UPDATE `借还` SET `是否归还` = '是' WHERE `读者证编号` = '" + borrow_book.getRno() +
                     "' AND `图书编号` = '" + borrow_book.getBno() + "' AND `借阅日期` = '" + borrow_book.getBorrow_date() + "' AND `是否归还` = '否'";
             int i = getStmt().executeUpdate(sqlString);
+
+            //判断是否归还成功
             if (i == 0){
                 showalertbox("警告" , "归还失败！请重试！");
                 return;
@@ -135,9 +143,19 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
 
     //图书借阅信息查询
     public static void borrowselect(String no) throws Exception{
+
         if (Ret()) {
             setRs(null);
-            String sqlString = "SELECT * FROM `借还`, `图书` WHERE `读者证编号` = '" + no + "' AND `借还`.`图书编号` = `图书`.`图书编号` ORDER BY `是否归还` DESC ";
+            String sqlString = "SELECT * FROM `读者` WHERE `读者证编号` = '" + no + "'";
+            setRs(getStmt().executeQuery(sqlString));
+
+            //如果不存在该用户，输出错误，返回
+            if (!getRs().next()) {
+                showalertbox("警告", "查无此人！信息查询失败！");
+                return;
+            }
+            setRs(null);
+            sqlString = "SELECT * FROM `借还`, `图书` WHERE `读者证编号` = '" + no + "' AND `借还`.`图书编号` = `图书`.`图书编号` ORDER BY `是否归还` DESC ";
             setRs(getStmt().executeQuery(sqlString));
         } else {
             showalertbox("警告", "数据库连接失败！");

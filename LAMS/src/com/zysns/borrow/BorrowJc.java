@@ -199,7 +199,12 @@ public class BorrowJc extends Window implements Initializable {
             borrowselect(getW_reader().getRno());
         }
         else {
-            borrowselect(readerID.getText());
+            String id = readerID.getText();
+            if (id == null || id.equals("")){
+                showalertbox("警告", "您输入的信息不全！请检查后重试！");
+                return;
+            }
+            borrowselect(id);
         }
 
         //将查询操作结果显示在TableView中
