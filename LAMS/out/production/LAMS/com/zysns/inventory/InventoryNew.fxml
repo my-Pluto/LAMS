@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zysns.inventory.InventoryNew">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="exit_button" mnemonicParsing="false" onAction="#exit" text="exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="about_button" mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="85.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="99.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../lib/picture/logolow.png" />
+                     </image></ImageView>
+                  <Label fx:id="user" layoutX="1130.0" layoutY="39.0" text="用户名" />
+                  <Button fx:id="exit_login_button" layoutX="1185.0" layoutY="34.0" mnemonicParsing="false" onAction="#exit_login" style="-fx-background-color: transparent;" text="退出" />
+                  <Button layoutX="191.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" style="-fx-background-color: linear-gradient(#FFB90F, #FFFF00);" text="新书录入">
+                     <font>
+                        <Font name="Microsoft JhengHei" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="update_book_button" layoutX="310.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#update_book" prefHeight="49.0" prefWidth="119.0" text="图书修改">
+                     <font>
+                        <Font name="Microsoft JhengHei" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <BorderPane.margin>
+            <Insets bottom="2.0" />
+         </BorderPane.margin>
+         <left>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="borrow_button" mnemonicParsing="false" onAction="#borrow" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="图书借还">
+                     <VBox.margin>
+                        <Insets left="2.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="select_button" mnemonicParsing="false" onAction="#select" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10; -fx-background-color: ;" text="查询系统">
+                     <VBox.margin>
+                        <Insets left="2.0" />
+                     </VBox.margin></Button>
+                  <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient( #B0E2FF,#BBFFFF);" text="图书管理">
+                     <VBox.margin>
+                        <Insets left="2.0" />
+                     </VBox.margin></Button>
+                  <Button fx:id="account_button" mnemonicParsing="false" onAction="#account" prefHeight="78.0" prefWidth="101.0" style="-fx-background-radius: 10;" text="账号管理">
+                     <VBox.margin>
+                        <Insets left="2.0" />
+                     </VBox.margin></Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <left>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+               </left>
+               <top>
+                  <Separator prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="new_button" layoutX="498.0" layoutY="556.0" mnemonicParsing="false" onAction="#new_book_jdbc" prefHeight="63.0" prefWidth="129.0" text="录入">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <GridPane layoutX="36.0" layoutY="20.0" prefHeight="511.0" prefWidth="1068.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="234.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="72.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.0" minWidth="10.0" prefWidth="107.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="244.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="37.0" prefWidth="92.0" text="图书编号" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="STKaiti" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="book_no" prefHeight="37.0" promptText="请输入八位图书编号" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label prefHeight="37.0" prefWidth="92.0" text="图书名称" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="STKaiti" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="92.0" text="I S B N" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="STKaiti" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="92.0" text="出版时间" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="STKaiti" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="92.0" text="出 版 社" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="STKaiti" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="92.0" text="图书作者" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="STKaiti" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="92.0" text="书架编号" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="STKaiti" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="92.0" text="所属类别" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="STKaiti" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label prefHeight="37.0" prefWidth="92.0" text="购买数量" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                 <font>
+                                    <Font name="STKaiti" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="25.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="baoutor" prefHeight="37.0" promptText="请输入图书作者" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <TextField fx:id="bname" prefHeight="37.0" promptText="请输入图书名称" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                              <TextField fx:id="bisbn" prefHeight="37.0" promptText="请输入图书的ISBN" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                              <TextField fx:id="bpublish" prefHeight="37.0" promptText="请输入出版社名称" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                              <DatePicker fx:id="bdate" prefHeight="37.0" promptText="请选择出版时间" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                              <TextField fx:id="bquantity" prefHeight="37.0" promptText="请输入新书的购买数量" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                              <TextField fx:id="bbookno" prefHeight="37.0" promptText="请输入图书所在书架编号" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <ComboBox fx:id="bfamily" prefHeight="37.0" prefWidth="251.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+   <bottom>
+      <Label text="Version 1.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="1150.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+</BorderPane>
