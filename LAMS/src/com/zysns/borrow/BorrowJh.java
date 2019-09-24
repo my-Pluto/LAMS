@@ -199,6 +199,7 @@ public class BorrowJh extends Window implements Initializable {
     //借书信息查询
     @FXML
     void select_h() throws Exception {
+        boolean answer = false;
         //绑定属性列
         borroe_date.setCellValueFactory(new PropertyValueFactory<>("borrow_date"));
         book_no.setCellValueFactory(new PropertyValueFactory<>("Bno"));
@@ -207,13 +208,14 @@ public class BorrowJh extends Window implements Initializable {
 
         //信息查询
         if (getW_manager() == null) {
-            borrowselect(getW_reader().getRno());
+            answer = borrowselect(getW_reader().getRno());
         }
         else {
-            borrowselect(readerID.getText());
+            answer = borrowselect(readerID.getText());
         }
 
         //显示查询结果
+        if (answer)
         tableview.setItems(getstill());
     }
 

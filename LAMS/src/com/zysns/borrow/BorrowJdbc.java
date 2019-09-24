@@ -144,7 +144,7 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
     }
 
     //图书借阅信息查询
-    public static void borrowselect(String no) throws Exception{
+    public static boolean borrowselect(String no) throws Exception{
 
         if (Ret()) {
             setRs(null);
@@ -154,15 +154,17 @@ public class BorrowJdbc extends com.zysns.main.Jdbc {
             //如果不存在该用户，输出错误，返回
             if (!getRs().next()) {
                 showalertbox("警告", "查无此人！信息查询失败！");
-                return;
+                return false;
             }
 
             //查询操作
             setRs(null);
             sqlString = "SELECT * FROM `借还`, `图书` WHERE `读者证编号` = '" + no + "' AND `借还`.`图书编号` = `图书`.`图书编号` ORDER BY `是否归还` DESC ";
             setRs(getStmt().executeQuery(sqlString));
+            return true;
         } else {
             showalertbox("警告", "数据库连接失败！");
+            return false;
         }
     }
 

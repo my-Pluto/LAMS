@@ -171,6 +171,7 @@ public class BorrowJJ extends Window implements Initializable {
         //进行输入结果是否为空检验
         if (Bno == null || Bno.equals("") || Rno == null || Rno.equals("")){
             showalertbox("警告", "您输入的信息不全！\n请检查输入！");
+            return;
         }
 
         //进行图书借阅操作

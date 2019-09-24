@@ -187,6 +187,7 @@ public class BorrowJch extends Window implements Initializable {
     //催还信息查询事件响应
     @FXML
     void select_urge() throws Exception {
+        boolean answer = false;
         //绑定属性列
         borrow_date.setCellValueFactory(new PropertyValueFactory<>("borrow_date"));
         reader_ID.setCellValueFactory(new PropertyValueFactory<>("Rno"));
@@ -196,13 +197,14 @@ public class BorrowJch extends Window implements Initializable {
 
         //进行查询操作，调用jdbc中的方法，需要区分账户属性
         if (getW_manager() == null) {
-            borrowselect(getW_reader().getRno());
+            answer = borrowselect(getW_reader().getRno());
         }
         else {
-            borrowselect(readerID.getText());
+            answer = borrowselect(readerID.getText());
         }
 
         //查询结果显示
+        if (answer)
         Table_view.setItems(geturge());
     }
 
