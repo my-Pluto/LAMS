@@ -11,3 +11,7 @@
 Java 为开发语言实现上述要求。
 
 2019年6月
+
+Yufei Zhang
+email：1173171785@qq.com
+I'm applying for a JetBrains Open Source License。
